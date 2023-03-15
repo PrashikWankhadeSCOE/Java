@@ -1,0 +1,249 @@
+---- QUE 1-------
+Write the program to print the table of 2
+OUTPUT : 2 4 6 8 10 12 14 16 18 20
+
+class Core2Web{
+        public static void main(String [] ew){
+                int N = 2;
+                int x = 1;
+                while( x<=10){
+                        System.out.println(N*x);
+                        x++;
+                }
+        }
+}
+
+---- QUE 2 ----
+Write the program to calculate the factorial of the number
+Input : 6
+Output : 720
+
+class Core2Web{
+        public static void main(String [] ew){
+      
+                int N = 9;
+                int fact = 1;
+                while (N!=0){
+                        fact = fact*N;
+                        N--;
+                }
+                System.out.println(fact);
+        }
+}
+
+---- QUE 3 ----
+Write the program to count the digit of the given number 
+Input : 862604564
+Output : 9
+
+class Core2Web{
+        public static void main(String [] ew){
+                int N = 862604564;
+                int i = 0;
+
+                while(N!=0){
+                        N = N/10;
+                        i++;
+                }
+                System.out.println(i);
+        }
+}
+
+----QUE 4 ----
+Write a program to count the odd digit of given n number
+Input : 865614564
+Output : 3
+
+
+class Core2Web{
+        public static void main(String [] ew){
+        
+                int N = 865614564;
+                int i = 0;
+                int x = 0;
+                while( N!=0){
+                        x = N%10;
+                        if ( x%2 != 0){
+                                i++;
+                        }
+                        N = N/10;
+                }
+                System.out.println(i);
+        }
+}
+
+----QUE 5 ----
+Write a program to print the square of the even digit of the given nummber 
+Input : 865614564
+Output : 16  36  16  36  36  64
+
+class Core2Web{
+        public static void main(String [] ew){
+        
+                int N  = 865614564;
+                int i = 0;
+                while (N!=0){
+                        int x = N%10;
+                        if ( x%2== 0){
+                                System.out.println(x*x);
+                        }
+                        N=N/10;
+                }
+        }
+}
+
+
+----QUE 6 ----
+Write a program to print the sum of the even number and the multiplication of the even numbers beetween 1 to 10 
+Output : Sum of even numbers between 1 to 10 is 30 
+         Multiplication if odd numbers between 1 to 30 is 945
+
+
+class Core2Web{
+        public static void main(String [] ew){
+
+                int N = 10;
+                int i=1;
+                int sum = 0;
+                int mult = 1;
+
+                while(i<=N){
+                        if (i%2==0){
+                                sum = sum + i;
+                        }
+                        else {
+                                mult = mult*i;
+                        }
+                        i++;
+                }
+                        System.out.println("Sum of the even number between 1 to 10 " + sum);
+                        System.out.println("Multiplication of the odd numbers between 1 to 10 is " + mult);
+                        
+        }
+}
+
+----QUE 7 ----
+Write a program which takes number from the user if number is even print that number in reverse order or if 
+the number is odd then print that number in reverse order with diff of two
+Input : 6
+Output : 6  5 4 3 2 1
+Intput : 7
+Output : 7  5  3  1
+
+
+class Core2Web{
+        public static void main(String [] ew){
+                     int N = 6;
+                     if ( N%2 == 0){
+                            while ( N!=0){
+                                System.out.println(N);
+                                N--;
+                        }
+                }
+                else {
+                        while (N>=0){
+                                System.out.println(N);
+                                N = N-2;
+                        }
+                }
+
+        }
+
+}
+        
+
+----QUE 8----
+
+Write the program to print the countdown of days remaining to submit the assignment 
+Input : days = 7
+Output : 7 days remaining 
+6 days remaining 
+.
+.
+.
+1 day remaining 
+0 days assignment due 
+
+
+class Core2Web{
+        public static void main(String [] ew){
+                int N = 0;
+                if ( N>0){
+                        while( N!=0){
+                                System.out.println(N + " days remaining");
+                                N--;
+                        }
+                }
+                else {
+                        System.out.println( N + " days assignment is due ");
+                }
+        }
+}
+
+---- QUE 9 ----
+Write a program to reverse a number 
+Input : 76896534
+Output : 43569867
+
+class Core2Web{
+        public static void main(String [] ew){
+                int N = 76896534;
+                int rev = 0;
+                int rem = 0;
+                while(N!=0){
+                        rem = N%10;
+                        rev = rev*10 + rem;
+                        N = N/10;
+                }
+                System.out.println(rev);
+        }
+}
+
+----QUE 10 ----
+Write a program to check wheather a number is a palindrome no or not 
+Input : 3443
+Output : this is a palindrome no 
+Input : 7678
+Output : This is not a palindrome no
+
+
+class Core2Web{
+        public static void main(String [] ew){
+           int num = 344;
+                int N = num;
+                int rev = 0;
+                int rem = 0;
+                while(N!=0){
+                        rem = N%10;
+                        rev = rev*10 + rem;
+                        N = N/10;
+                }
+                if ( rev == num) {
+                        System.out.println( " This is a palindrome no ");
+                }
+                else {
+                        System.out.println( " This is not a palindrome no ");
+                }
+        }
+}
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
