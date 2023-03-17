@@ -150,20 +150,34 @@ Output : not a Armstrong no
 Input : 153
 Output : it is a Armstrong no 
 
-class ForDemo{
-        public static void main( String [] args){
+class Arm{
+        public static void main( String [] ds){
                 int N = 153;
+                int temp1 = N;
+                int temp2 = N;
+                int c = 0;
+                int mult = 1;
                 int sum = 0;
-                int Temp = N;
-                for (int i = 1; N!=0 ; N=N/10 ){
-                        i = N%10;
-                        sum = sum + i*i*i ;
+                while ( N!=0){
+                        c++;
+                        N = N/10;
                 }
-                if (Temp == sum) {
-                        System.out.println("it is a Armstrong number ");
+                while ( temp1!=0){
+                        int x = temp1%10;
+                        mult = 1;
+                        for( int i=1;i<=c;i++){
+                                mult = mult*x;
                         }
+                        sum = sum + mult;
+                        temp1 = temp1/10;
+                }
+                if ( sum == temp2) {
+                        System.out.println( " this is the Armstromg No " );
+
+                }
+
                 else {
-                        System.out.println( " it is not a Armstrong Number " );
+                        System.out.println( " This is not Armstrong No " );
                 }
         }
 }
