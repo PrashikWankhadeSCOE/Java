@@ -1,0 +1,182 @@
+====================== FOR LOOP ====================
+
+QUE 1  ======================================
+Take N as input and print from 1 to N 
+Input : 10
+Output : 1 2 3 4 5 6 7 8 9 10
+
+class Demo {
+        public static void main(String [] args){
+                int N = 10;
+                for( int i = 1 ; i<= 10 ; i ++ )
+                {
+                        System.out.println(i);
+                }
+        }
+}
+
+QUE 2 =======================================
+Take N as input . Pirnt odd integer from 1 to N 
+Input : 6
+Output : 1 3 5
+
+class Demo{
+        public static void main(String [] args){
+                int N = 6;
+                for(int i=1;i<=N;i++ ){
+                        if(i%2 != 0){
+                        System.out.println(i);
+                        }
+
+                }
+        }
+}
+
+QUE 3 ======================================
+Take N as input print its factorial 
+Input : 5
+Output : 120 
+Input : 4
+Output : 24
+
+class Demo{
+        public static void main(String [] args){
+                int N = 5;
+                int fact = 1 ;
+                for(int i=1;i<=N;i++ ){
+                        fact = fact*i ;
+                }
+
+                System.out.println(fact);
+
+        }
+}
+
+QUE 4 ==============================================
+Take N as input print all its factor 
+Factor :
+x is a factor of N if N%x == 0 
+Input : 6
+Output : 1 2 3 6
+
+class Demo{
+        public static void main(String [] args){
+                int N = 6;
+                int fact = 1 ;
+                for(int i=1;i<=N;i++ ){
+                        if ( N%i == 0) {
+                                System.out.println( i );
+                        }
+                }
+        }
+}
+
+QUE 5 ============================================
+Take N as input count all its factor and print counts 
+Input : 6 
+Output : 4
+
+class Demo{
+        public static void main(String [] args){
+                int N = 5;
+                int count = 0 ;
+                for(int i=1;i<=N;i++ ){
+                        if ( N%i == 0) {
+                                count++;
+                        }
+                }
+                System.out.println(count);
+        }
+}
+
+
+QUE 6 ==============================================
+Take N as input print wheather its prime or not 
+Input : 5 
+Output : Prime Number 
+
+class ForDemo{
+        public static void main( String [] args){
+                int N = 5;
+                int count = 0;
+                for (int i = 1; i<=N ; i++ ){
+
+                        if ( N%i == 0 ){
+                                count++;
+                        }
+                }
+                if ( count == 2) {
+                        System.out.println("it is a prime number ");
+                        }
+
+                else {
+                        System.out.println( " it is not a Prime Number " );
+                }
+        }
+}
+
+QUE 7 ==================================================
+Take integer N as input Print wheather N is a perfect number or not 
+Input : 4 
+Output : not perfect no 
+Input : 6
+Output : Perfect number 
+
+class ForDemo{
+        public static void main( String [] args){
+                int N = 6;
+                int sum = 0;
+                int Temp = N;
+                for (int i = 1; i<N ; i++ ){
+
+                        if ( N%i == 0 ){
+                                sum = sum + i ;
+                        }
+                }
+                if (Temp == sum) {
+                        System.out.println("it is a Perfect number ");
+                        }
+
+                else {
+                        System.out.println( " it is not a Perfect Number " );
+                }
+        }
+}
+
+QUE 8 =======================================================
+Take N as input Print wheather N is Armstromg number or not 
+Input : 23
+Output : not a Armstrong no
+Input : 153
+Output : it is a Armstrong no 
+
+class ForDemo{
+        public static void main( String [] args){
+                int N = 153;
+                int sum = 0;
+                int Temp = N;
+                for (int i = 1; N!=0 ; N=N/10 ){
+                        i = N%10;
+                        sum = sum + i*i*i ;
+                }
+                if (Temp == sum) {
+                        System.out.println("it is a Armstrong number ");
+                        }
+                else {
+                        System.out.println( " it is not a Armstrong Number " );
+                }
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
