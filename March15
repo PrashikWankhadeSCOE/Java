@@ -182,6 +182,128 @@ class Arm{
         }
 }
 
+QUE 9 =======================================================
+Take N as input Print wheather N is Composite number or not 
+Input : 9
+Output : is a Composite no
+Input : 5
+Output : it is not a Composite no 
+
+class Demo{
+        public static void main( String [] args){
+                int N = 18;
+                int c = 0;
+
+                for ( int i = 1 ; i<=N ;i++){
+
+                        if( N%i == 0){
+                                c++;
+                        }
+                }
+                if (c>2){
+                        System.out.println(" its a composite no ");
+                }
+                else {
+                        System.out.println(" its not a composite no ");
+                }
+        }
+}
+
+QUE 10 =======================================================
+Take N as input Print wheather N is Automorphic number or not 
+
+class Demo{
+        public static void main( String [] args){
+                int N = 25;
+                int c = 0;
+                int rev = 0;
+                int y = 0;
+
+                int temp1 = N;
+                int sq = N*N;
+
+                while(N!=0){
+                        N=N/10;
+                        c++;
+                }
+                for(int i=1;i<=c;i++){
+
+                        int rem = sq%10;
+                        rev = rev*10 + rem;
+                        sq = sq/10;
+                }
+                System.out.println(rev);
+                while (rev !=0){
+                        int z = rev%10;
+                        y = y*10 + z;
+                        rev = rev/10;
+                }
+                System.out.println(y);
+                System.out.println(temp1);
+                if ( y == temp1){
+                        System.out.println( "Automorphic no " );
+                }
+                else {
+                        System.out.println( " not an Autoorphic no ");
+                }
+
+        }
+}
+
+QUE 11 =======================================================
+Take N as input Print wheather N is Strong number or not 
+
+class Demo{
+        public static void main( String [] args){
+                int N = 145;
+                int sum = 0;
+                int temp =N;
+                while( N!=0){
+                        int fact = 1;
+                        int x = N%10;
+                        for (int i=x; i!=0;i--){
+
+                                fact = fact*i;
+                        }
+                        System.out.println(fact);
+                        sum = sum + fact;
+                        N= N/10;
+                }
+
+                System.out.println(sum);
+                System.out.println(temp);
+                if ( sum == temp){
+                        System.out.println( "Strong no " );
+                }
+                else {
+                        System.out.println( " not an Strong no ");
+                }
+
+        }
+}
+
+QUE 11 =======================================================
+
+Print First 10 Fibonacci number 
+
+class Demo{
+        public static void main( String [] args){
+                int N = 10;
+                int a = 0;
+                int b = 1;
+                int temp = 0;
+                for ( int i = 0; i<=N;i++){
+                        System.out.println(a);
+                        temp = a + b ;
+                        a= b;
+                        b = temp;
+                }
+        }
+}
+
+
+
+
 
 
 
