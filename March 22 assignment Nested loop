@@ -149,6 +149,16 @@ c c c c
 b b b b 
 a a a a 
 
+class Myclass{
+        public static void main(String [] args){
+                for(char i = 'd';i>='a';i--){
+                        for(int j = 1; j<=4; j++){
+                                System.out.print(i +" ");
+                        }
+                        System.out.println();
+                }
+        }
+}
 
 ================ Que 9 =================================
 Write a program to print 
@@ -156,6 +166,18 @@ Write a program to print
 C B A 
 C B A
 C B A
+
+class Myclass{
+        public static void main(String [] args){
+                int N = 3;
+                for(int i = 1;i<=N;i++){
+                        for(char j = 'C'; j>='A'; j--){
+                                System.out.print(j +" ");
+                        }
+                        System.out.println();
+                }
+        }
+}
 
 
 ================ Que 10 =================================
