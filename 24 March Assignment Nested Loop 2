@@ -161,9 +161,9 @@ class MyClass{
 =================================== QUE 8 =================================
 Print the following Pattern
 A b C d
-f E h G
+E f G h
 I j K l
-n M p O
+M n O p
 
 class MyClass{
         public static void main(String [] args){
@@ -172,7 +172,7 @@ class MyClass{
                 char ch1 = 'b';
                 for(int i = 1; i<=N; i++){
                         for(int j = 1; j<=N; j++){
-                                if((i+j)%2==0){
+                                if(j%2!=0){
                                         System.out.print(ch++ +" ");
                                         ch++;
                                 }
