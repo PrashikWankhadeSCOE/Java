@@ -1,0 +1,245 @@
+=================================== QUE 1 =================================
+Print the following Pattern
+ C2W1 C2W2 C2W3
+ C2W1 C2W2 C2W3
+ C2W1 C2W2 C2W3
+ 
+ class MyClass{
+        public static void main(String [] args){
+                int N = 3;
+                for(int i = 1; i<=N; i++){
+                        for(int j = 1; j<=N; j++){
+                                System.out.print(" C2W"+j);
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+=================================== QUE 2 =================================
+Print the following Pattern
+4 4 4 4
+5 5 5 5
+6 6 6 6
+7 7 7 7
+
+class MyClass{
+        public static void main(String [] args){
+                int N = 4;
+                for(int i = 1; i<=N; i++){
+
+                        for(int j = 1; j<=N; j++){
+                                System.out.print(i+3 +" ");
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+=================================== QUE 3 =================================
+Print the following Pattern
+
+14 15 16 17
+15 16 17 18
+16 17 18 19
+17 18 19 20
+
+class MyClass{
+        public static void main(String [] args){
+                int N = 4;
+                int x = 0;
+                for(int i = 1; i<=N; i++){
+                        for(int j = 1; j<=N; j++){
+                                System.out.print(x+j+13 +" ");
+                        }
+                        System.out.println();
+                        x++;
+                }
+        }
+}
+
+
+=================================== QUE 4 =================================
+Print the following Pattern
+
+ 1A 2B 3C
+ 1A 2B 3C
+ 1A 2B 3C
+  
+class MyClass{
+        public static void main(String [] args){
+                int N = 3;
+                for(int i = 1; i<=N; i++){
+
+                        char ch ='A';
+                        for(int j = 1; j<=N; j++){
+                                System.out.print(" " + j + ch++);
+                        }
+                        System.out.println();
+
+                }
+        }
+}
+
+=================================== QUE 5 =================================
+Print the following Pattern
+
+26 Z 25 Y
+24 X 23 W
+22 V 21 U
+20 T 19 S
+
+class MyClass{
+        public static void main(String [] args){
+                int N = 4;
+                char ch = 'Z';
+                int x = 26;
+                for(int i = 1; i<=N; i++){
+                        for(int j = 1; j<=N; j++){
+                                if(j%2!=0){
+                                        System.out.print(x-- + " ");
+                                }
+                                else{
+                                        System.out.print(ch-- +" ");
+                                }
+
+                        }
+                        System.out.println();
+
+                }
+        }
+}
+
+
+=================================== QUE 6 =================================
+Print the following Pattern
+
+1  4  9
+16 25 36
+49 64 81
+
+class MyClass{
+        public static void main(String [] args){
+                int N = 3;
+                int x = 1;
+                for(int i = 1; i<=N; i++){
+                        for(int j = 1; j<=N; j++){
+                                System.out.print(x*x +"\t");
+                                x++;
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+=================================== QUE 7 =================================
+Print the following Pattern
+
+1  2  9
+4  25 6
+49 8  81
+
+class MyClass{
+        public static void main(String [] args){
+                int N = 3;
+                int x = 1;
+                for(int i = 1; i<=N; i++){
+                        for(int j = 1; j<=N; j++){
+                                if((i+j)%2==0){
+                                        System.out.print(x*x +"\t");
+                                }
+                                else{
+                                        System.out.print(x + "\t");
+                                }
+                                x++;
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+=================================== QUE 8 =================================
+Print the following Pattern
+A b C d
+f E h G
+I j K l
+n M p O
+
+class MyClass{
+        public static void main(String [] args){
+                int N = 4;
+                char ch = 'A';
+                char ch1 = 'b';
+                for(int i = 1; i<=N; i++){
+                        for(int j = 1; j<=N; j++){
+                                if((i+j)%2==0){
+                                        System.out.print(ch++ +" ");
+                                        ch++;
+                                }
+                                else{
+                                        System.out.print(ch1++ + " ");
+                                        ch1++;
+                                }
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+=================================== QUE 9 =================================
+Print the following Pattern
+        1C3     4B2     9A1
+        16C3    25B2    36A1
+        49C3    64B2    81A1
+        
+class MyClass{
+        public static void main(String [] args){
+                int N = 3;
+                int x = 1;
+                for(int i = 1; i<=N; i++){
+                        char ch = 'C';
+                        int y = 3;
+                        for(int j = 1; j<=N; j++){
+                                System.out.print("\t" + x*x + ch-- + y-- );
+                                x++;
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+=================================== QUE 10 =================================
+Print the following Pattern
+
+F 5 D 3 B 1
+F 5 D 3 B 1
+F 5 D 3 B 1
+F 5 D 3 B 1
+F 5 D 3 B 1
+F 5 D 3 B 1
+
+class MyClass{
+        public static void main(String [] args){
+                int N = 6;
+                for(int i = 1; i<=N; i++){
+                        char ch = 'F';
+                        int y = 6;
+                        for(int j = 1; j<=N; j++){
+                                if(j%2!=0){
+                                        System.out.print(ch + " ");
+                                }
+                                else{
+                                        System.out.print(y + " ");
+                                }
+                                ch--;
+                                y--;
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+
+
+
+
