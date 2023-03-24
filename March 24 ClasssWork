@@ -1,0 +1,320 @@
+=================================================================================
+Print the pattern
+
+*     *
+*     *
+*     *
+*     *
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1 ; j<=N ; j++){
+                                if (j==1 || j==N){
+                                        System.out.print("* ");
+                                }
+                                else {
+                                        System.out.print("  ");
+                                }
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * * *
+* * * * * * *
+* * * * * * * *
+* * * * * * * * *
+* * * * * * * * * *
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 10;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1 ; j<=i ; j++){
+                                        System.out.print("* ");
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 5;
+                int x = 1;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1 ; j<=i ; j++){
+                                        System.out.print(x++ +" ");
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+
+1
+1 2
+1 2 3
+1 2 3 4
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+
+                for(int i = 1; i<=N; i++){
+                        int x = 1;
+                        for (int j = 1 ; j<=i ; j++){
+                                        System.out.print(x++ +" ");
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+
+10
+9 8
+7 6 5
+4 3 2 1
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                int x = 10;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1;j<=i;j++){
+                                        System.out.print(x-- +" ");
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+
+* * * *
+* * *
+* *
+*
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1;j<=N-i+1;j++){
+                                        System.out.print("* ");
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+
+A B C D
+A B C
+A B
+A
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                for(int i = 1; i<=N; i++){
+                        char ch = 'A';
+                        for (int j = 1;j<=N-i+1;j++){
+                                        System.out.print(ch++ +" ");
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+1
+4 9
+16 25 36
+49 64 81 100  
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                int x = 1;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1;j<= i;j++){
+                                System.out.print(x*x +" ");
+                                x++;
+
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+1
+4 3
+16 5 36
+49 8 81 10
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                int x = 1;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1;j<= i;j++){
+                                if(j%2==1){
+                                        System.out.print(x*x +" ");
+                                }
+                                else{
+                                        System.out.print(x+" ");
+                                }
+                                x++;
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+
+*
+* #
+* # *
+* # * #
+* # * # *
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 5;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1;j<= i;j++){
+                                if(j%2==1){
+                                        System.out.print("* ");
+                                }
+                                else{
+                                        System.out.print("# ");
+                                }
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+A 1 B 2
+C 3 D
+E 4
+F
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                char ch = 'A';
+                int x = 1;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1;j<=N-i+1;j++){
+                                if(j%2==1){
+                                        System.out.print(ch++ +" ");
+                                }
+                                else{
+                                        System.out.print(x++ +" ");
+                                }
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+1 4 3 16
+5 36 7
+8 81
+10
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                int x = 1;
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1;j<=N-i+1;j++){
+                                if(j%2==1){
+                                        System.out.print(x +" ");
+                                }
+                                else{
+                                        System.out.print(x*x +" ");
+                                }
+                                x++;
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+==================================================================================
+Print the pattern
+1
+2 c
+4 e 6
+7 h 9 j
+
+class Myclass{
+        public static void main(String [] args ){
+                int N = 4;
+                int x = 1;
+                char ch = 'a';
+                for(int i = 1; i<=N; i++){
+                        for (int j = 1;j<=i;j++){
+                                if(j%2==1){
+                                        System.out.print(x +" ");
+                                }
+                                else{
+                                        System.out.print(ch +" ");
+                                }
+                                ch++;
+                                x++;
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
