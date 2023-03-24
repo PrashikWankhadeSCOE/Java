@@ -151,11 +151,13 @@ a a a a
 
 class Myclass{
         public static void main(String [] args){
-                for(char i = 'd';i>='a';i--){
+                char ch = 'd';
+                for(int i = 1;i<=4;i++){
                         for(int j = 1; j<=4; j++){
-                                System.out.print(i +" ");
+                                System.out.print(ch +" ");
                         }
                         System.out.println();
+                        ch--;
                 }
         }
 }
@@ -171,8 +173,9 @@ class Myclass{
         public static void main(String [] args){
                 int N = 3;
                 for(int i = 1;i<=N;i++){
-                        for(char j = 'C'; j>='A'; j--){
-                                System.out.print(j +" ");
+                        char ch = 'C';
+                        for(int j = 1; j<=N; j++){
+                                System.out.print(ch-- + " ");
                         }
                         System.out.println();
                 }
