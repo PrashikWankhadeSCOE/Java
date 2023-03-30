@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+
+class SwitchDemo{
+        public static void main(String [] args){
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter the Hotel you want to eat in \n Anna or Durga");
+                String str = sc.nextLine();
+                switch(str){
+                        case("Anna"):{
+
+                                             System.out.println("Enter the Dish");
+                                             String str1 = sc.nextLine();
+                                             switch(str1){
+                                                     case("Vada"):
+                                                             System.out.println("Vada - 40");
+                                                             break;
+                                                     case("Dosa"):
+                                                             System.out.println("Dosa - 50");
+                                                             break;
+                                             }
+
+                        }
+                        break;
+                        case("Durga"):{
+                                              System.out.println("Enter the Dish");
+                                              String str1 = sc.nextLine();
+                                              switch(str1){
+                                                      case("Poha"):
+                                                              System.out.println("Poha - 20");
+                                                              break;
+                                                      case("Samosa"):
+                                                              System.out.println("Sasoma - 15");
+                                                              break;
+                                              }
+                        }
+                        break;
+                }
+        }
+}
