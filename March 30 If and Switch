@@ -1,0 +1,46 @@
+=============================== QUE 1 ===========================================
+
+Write a program in which students should enter marks of the 5 different subjects. if all subjects having above passing marks add
+them and provide to switch case to print grades( first class, second class). If student gets fail in any subject program should print 
+" You Failed".
+
+import java.util.Scanner;
+
+class SwitchDemo{
+        public static void main(String [] args){
+
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter your marks");
+
+                int math = sc.nextInt();
+                int eng = sc.nextInt();
+                int gk = sc.nextInt();
+                int cs = sc.nextInt();
+                int mm = sc.nextInt();
+
+                if(math<36 || eng <36 || gk <36 || cs <36 || mm <36){
+                        System.out.println("you are successfully failed");
+                }
+                else{
+                        int sum = math+ eng + gk + cs + mm;
+                        int avg = sum/5;
+                        System.out.println(avg);
+
+                        if (avg >= 85){
+                                System.out.println(" You have Passed with 1st class");
+                        }
+                        else if(avg >= 60) {
+                                System.out.println(" you have Passed with 2nd class");
+                        }
+                        else {
+                                System.out.println(" Just passed");
+
+                        }
+                }
+        }
+}
+
+=============================== Que 2 =================================================
+
+Write a program in which ask the the user to enter a number from 0 to 5 and print its spelling 
+if the entered number is greater than 5 print entered number is greater than 5.
