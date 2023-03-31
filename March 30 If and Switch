@@ -44,3 +44,176 @@ class SwitchDemo{
 
 Write a program in which ask the the user to enter a number from 0 to 5 and print its spelling 
 if the entered number is greater than 5 print entered number is greater than 5.
+
+import java.util.Scanner;
+
+class SwitchDemo{
+        public static void main(String [] args){
+
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter the number");
+
+                int num = sc.nextInt();
+
+                switch(num){
+                        case 0:
+                                System.out.println("Zero");
+                                break;
+                        case 1:
+                                System.out.println("One");
+                                break;
+                        case 2:
+                                System.out.println("Two");
+                                break;
+                        case 3:
+                                System.out.println("Three");
+                                break;
+                        case 4:
+                                System.out.println("Four");
+                                break;
+                        case 5:
+                                System.out.println("Five");
+                                break;
+                        default:
+                                System.out.println("Greater than five");
+                                break;
+                }
+        }
+}
+
+
+=============================== Que 3 =================================================
+
+Write a program in which you should 2 numbers if both the numbers are posetive multiply it and provide to switch case to verify number is even or odd
+if user enter any negative number program should terminate saying "no negative number accepted".
+
+=============================== Que 4 =================================================
+
+Take choice from the user 
+Show this to user
+Whats your intrest
+1. Movies 
+2. Series
+Enter your choice 1 or 2
+if enters 1 
+movies you wish to watch today
+1. Founder
+2. Snowdwn
+3. Jobs
+4. Her
+5. Social Networks
+6. Wall-E
+7. AI
+
+Enter your Choice
+2. Snowden
+
+if user enters 2:
+Best series to watch 
+1. Sillicon Valley
+2. Devs
+3. the IT crowd
+4. Mr Robot
+
+print users choice
+
+=======================================================================================
+
+import java.util.Scanner;
+
+class SwitchDemo{
+        public static void main(String [] args){
+
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Whats your intrest\n 1. Movies \n 2. Series");
+
+                int num = sc.nextInt();
+
+                switch(num){
+                        case 1:
+                                System.out.println("Movies you Wish to Watch today\n1. Founder\n 2. Snowdwn\n 3. Jobs\n 4. Her\n5. Social Networks\n 6. Wall-E \n 7. AI");
+                                int x = sc.nextInt();
+                                switch(x){
+                                        case 1:
+                                                System.out.println("Founder");
+                                                break;
+                                        case 2:
+                                               System.out.println("Snowdown");
+                                                break;
+                                        case 3:
+                                               System.out.println("Jobs");
+                                                break;
+                                        case 4:
+                                               System.out.println("Her");
+                                                break;
+                                        case 5:
+                                               System.out.println("Social Networks");
+                                                break;
+                                        case 6:
+                                               System.out.println("Wall - E");
+                                                break;
+                                        case 7:
+                                                System.out.println("AI");
+                                                break;
+                                        default :
+                                               System.out.println("Chose from above");
+                                                break;
+                                }
+                                break;
+
+
+                        case 2:
+                                System.out.println("Best series to watch \n1. Sillicon Valley \n 2. Devs\n 3. The IT crowd\n 4. Mr robot");
+                                int y = sc.nextInt();
+                                switch(y){
+                                        case 1:
+                                                System.out.println("Sillicon valley");
+                                                break;
+                                        case 2:
+                                               System.out.println("Devs");
+                                                break;
+                                        case 3:
+                                               System.out.println("The IT crownd");
+                                                break;
+                                        case 4:
+                                               System.out.println("Mr robot");
+                                                break;
+
+
+                                        default :
+                                               System.out.println("Chose from above");
+                                                break;
+                                }
+                                break;
+                        default:
+                                System.out.println("Greater than five");
+                                break;
+
+
+
+                }
+
+
+
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
