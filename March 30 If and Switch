@@ -87,6 +87,33 @@ class SwitchDemo{
 Write a program in which you should 2 numbers if both the numbers are posetive multiply it and provide to switch case to verify number is even or odd
 if user enter any negative number program should terminate saying "no negative number accepted".
 
+import java.util.Scanner;
+
+class Switchdemo{
+        public static void main(String [] args){
+                Scanner sc = new Scanner(System.in);
+
+                System.out.println("Enter the input");
+                int x = sc.nextInt();
+                int y = sc.nextInt();
+
+                if (x<0 || y<0){
+                        System.out.println("Negative Number not allowed");
+                }
+                else{
+                        int mult = x*y;
+                        switch(mult%2){
+                                case 0 :
+                                        System.out.println(" even Output");
+                                        break;
+                                case 1:
+                                        System.out.println(" Odd Output");
+                                        break;
+                        }
+                }
+        }
+}
+
 =============================== Que 4 =================================================
 
 Take choice from the user 
