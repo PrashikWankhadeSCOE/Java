@@ -23,3 +23,33 @@ class Jd{
         }
 
 }
+
+
+====================== Non static variable and static variable both can be accessed by a non static functionn 
+====================== Whereas static function can only access static variable
+
+
+import java.util.*;
+import java.io.*;
+
+class Jd{
+        int z = 10;
+        static int y = 22;
+        void fun(){
+                int ans = z+y;
+
+                System.out.println(ans);
+        }
+        static void gun(){
+                System.out.println("In gun method");
+        }
+        public static void main(String[]args){
+                Jd x = new Jd();
+                System.out.println(x.z);
+                System.out.println(y);
+                x.fun();
+                gun();
+
+        }
+
+}
