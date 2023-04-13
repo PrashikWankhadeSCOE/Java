@@ -1,0 +1,25 @@
+=========== Creating method 
+=========== Static and Non Static
+=========== Using non Static method creating class object 
+
+import java.util.*;
+import java.io.*;
+
+class Jd{
+        int z = 10;
+        static int y = 22;
+        public static void main(String[]args){
+                Jd x = new Jd();
+                x.fun();
+                gun();
+                System.out.println(x.z);
+                System.out.println(y);
+        }
+        void fun(){
+                System.out.println("In fun method ");
+        }
+        static void gun(){
+                System.out.println("In gun method");
+        }
+
+}
