@@ -89,3 +89,45 @@ class Jd{
                 div(a,m);
         }
 }
+
+====================== non static method by making object
+====================
+
+import java.util.*;
+import java.io.*;
+
+class MeDemo{
+        void add(int x , int y ){
+                int ans = x+y;
+                System.out.println(ans);
+        }
+        void sub(int a, int b){
+                int ans = a-b;
+                System.out.println(ans);
+        }
+        void mult(int x , int y ){
+                int ans = x*y;
+                System.out.println(ans);
+        }
+        void div(int f, int t){
+                int ans = f/t;
+                System.out.println(ans);
+        }
+        public static void main(String [] ans)throws IOException{
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.println("Enter first digit");
+                int a = Integer.parseInt(br.readLine());
+
+                System.out.println("Enter Second digit");
+                int m = Integer.parseInt(br.readLine());
+
+                MeDemo obj = new MeDemo();
+
+                obj.add(a,m);
+                obj.sub(a,m);
+                obj.mult(a,m);
+                obj.div(a,m);
+        }
+}
