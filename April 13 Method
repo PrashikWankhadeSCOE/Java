@@ -53,3 +53,39 @@ class Jd{
         }
 
 }
+
+============================= Creating static methods and calling it from main method
+============================
+
+import java.util.*;
+import java.io.*;
+
+class Jd{
+        static void add(int x , int y ){
+                int ans = x+y;
+                System.out.println(ans);
+        }
+        static void sub(int a, int b){
+                int ans = a-b;
+                System.out.println(ans);
+        }
+        static void mult(int x , int y ){
+                int ans = x*y;
+                System.out.println(ans);
+        }
+        static void div(int f, int t){
+                int ans = f/t;
+                System.out.println(ans);
+        }
+        public static void main(String [] ans)throws IOException{
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                int a = Integer.parseInt(br.readLine());
+                int m = Integer.parseInt(br.readLine());
+
+                add(a,m);
+                sub(a,m);
+                mult(a,m);
+                div(a,m);
+        }
+}
