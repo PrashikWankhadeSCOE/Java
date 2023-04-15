@@ -181,5 +181,102 @@ class Magic{
         }
 }
 
-====================== Que 6 ===========
+====================== Que 7 ===========
+Write a program to print the following patten
 
+Input: 
+Enter no of rows : 5
+Output :
+
+O
+14 13
+L K J
+9 8 7 6
+E D C B A
+
+
+import java.io.*;
+
+class Magic{
+        public static void main(String[] args)throws IOException{
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter no of rows : ");
+                int row = Integer.parseInt(br.readLine());
+
+                int temp =row;
+                int sum = 0;
+                for(int i=1;i<=row;i++){
+                        sum=sum+temp;
+                        temp--;
+                }
+
+                for(int i = 1; i<=row; i++){
+                        for(int j = 1; j<=i;j++){
+                                char ch =(char)(64+sum);
+                                if(i%2==1){
+                                        System.out.print(ch+" ");
+                                }
+                                else{
+                                        System.out.print(sum+ " ");
+                                }
+                                sum--;
+                        }
+                        System.out.println();
+                }
+        }
+}
+
+========================== Que 8 ======================
+
+Write a program to print the following pattern 
+
+Input : 
+Enter no of rows : 8
+
+Output :
+$
+@ @
+& & &
+# # # #
+$ $ $ $ $
+@ @ @ @ @ @
+& & & & & & &
+# # # # # # # #
+
+import java.io.*;
+
+class Magic{
+        public static void main(String[] args)throws IOException{
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter no of rows : ");
+                int row = Integer.parseInt(br.readLine());
+
+                char ch = '$';
+                char ch1 = '@';
+                char ch2 = '&';
+                char ch3 = '#';
+
+                for(int i = 1; i<=row; i++){
+                        for(int j = 1; j<=i;j++){
+
+                                if(i%4==1){
+                                        System.out.print(ch+" ");
+                                }
+                                else if(i%4==2){
+                                        System.out.print(ch1+ " ");
+                                }
+                                else if(i%4==3){
+                                        System.out.print(ch2+ " ");
+                                }
+                                else{
+                                        System.out.print(ch3+ " ");
+                                }
+                        }
+                        System.out.println();
+                }
+        }
+}
