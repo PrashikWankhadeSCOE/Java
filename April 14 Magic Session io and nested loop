@@ -280,3 +280,45 @@ class Magic{
                 }
         }
 }
+
+===================== Que 9 =============
+Write a program to take number as a input and print the addition of factorial of each digit from that number 
+
+Enter the Number:1234
+33
+
+import java.io.*;
+
+class Magic{
+        public static void main(String[] args)throws IOException{
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter the Number:");
+                int x = Integer.parseInt(br.readLine());
+
+                int temp = x;
+                int sum = 0;
+                while(temp>0){
+                        int fact = 1;
+                        int z = temp%10;
+                        for(int i=1;i<=z;i++){
+                                fact = fact*i;
+                        }
+                        sum = sum+fact;
+                        temp = temp/10;
+                }
+                System.out.println(sum);
+
+        }
+}
+
+============================= Que 10 =====================
+
+Write a program to print a series of prime number from entered range ( Take a start and end number from a user )
+Input :
+Enter starting number : 10
+Enter ending number : 100
+Ouput :
+Series == 11 13 17 19 ........89 97
+
