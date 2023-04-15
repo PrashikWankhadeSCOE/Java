@@ -9,6 +9,15 @@ A1 B2 C3 D4
 D4 C3 B2 A1
 A1 B2 C3 D4
 
+Input : 6
+Output :
+F6 E5 D4 C3 B2 A1
+A1 B2 C3 D4 E5 F6
+F6 E5 D4 C3 B2 A1
+A1 B2 C3 D4 E5 F6
+F6 E5 D4 C3 B2 A1
+A1 B2 C3 D4 E5 F6
+
 import java.io.*;
 
 class Magic{
