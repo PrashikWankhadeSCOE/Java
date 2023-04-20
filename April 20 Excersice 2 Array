@@ -1,1 +1,161 @@
 
+=========================== Program 1
+
+Write a program to create an array of 'n' integer elements. Where 'n' value should be taken from the user.
+Insert the values from users and find the sum of all elements in the array.
+Input : Enter elements in the array: 2 3 6 9 5 1
+Output: 26
+
+=====================================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.println("Enter the size");
+                int size = Integer.parseInt(br.readLine());
+
+                int arr[] = new int[size];
+
+                int sum = 0;
+                System.out.println("Enter array elements");
+                for(int i = 0;i<arr.length;i++){
+
+                        arr[i] = Integer.parseInt(br.readLine());
+
+                        sum = sum+arr[i];
+                }
+                System.out.println(sum);
+        }
+}
+
+=========================== Program 2
+
+WAP to find the number of even and odd integers in a given array of integers
+Input: 1 2 5 4 6 7 8
+Output:Number of Even Elements: 4
+Number of Odd Elements:3
+
+===========================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.println("Enter the size");
+                int size = Integer.parseInt(br.readLine());
+
+                int arr[] = new int[size];
+
+                int count = 0;
+                int count1 = 0;
+                System.out.println("Enter array elements");
+                for(int i = 0;i<arr.length;i++){
+
+                        arr[i] = Integer.parseInt(br.readLine());
+                        if(arr[i]%2==0){
+                                count++;
+                        }
+                        else{
+                                count1++;
+                        }
+                }
+                System.out.println("Even count =" + count);
+                System.out.println("Odd count="+ count1);
+        }
+}
+========================== Program 3
+
+Write a Java program to find the sum of even and odd numbers in an array. Display the sum value.
+Input: 11 12 13 14 15 
+Output:
+Odd numbers sum 39 Even numbers sum = 26
+
+=============================================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.println("Enter the size");
+                int size = Integer.parseInt(br.readLine());
+
+                int arr[] = new int[size];
+
+                int sumEven = 0;
+                int sumOdd = 0;
+                System.out.println("Enter array elements");
+                for(int i = 0;i<arr.length;i++){
+
+                        arr[i] = Integer.parseInt(br.readLine());
+                        if(arr[i]%2==0){
+                                sumEven= sumEven + arr[i];
+                        }
+                        else{
+                                sumOdd= sumOdd + arr[i];
+                        }
+
+                }
+                System.out.println("Even sum =" + sumEven);
+                System.out.println("Odd sum ="+ sumOdd);
+        }
+}
+
+========================= Program 4
+
+WAP to search a specific element from an array and return its index. Input: 12456
+Enter element to search: 4
+Output: element found at index: 2
+
+===================================================
+
+
+========================= Program 5
+
+WAP to take size of array from user and also take integer elements from user
+find the minimum element from the array
+input: Enter size: 5
+Enter array elements: 1 2 5 04
+output: min element=0
+
+========================== Program 6
+
+WAP to take size of array from user and also take integer elements from user find the maximum element from the array
+Input: Enter size: 5 Enter array elements: 1 2 504
+output: max slement=5
+
+========================== Program 7
+
+WAP to find the common elements between two arrays.
+Input: Enter first array: 1236 Enter Second array: 2198
+Output: Common elements:
+1
+2
+
+=========================== Program 8
+
+WAP to find the uncommon elements between two arrays..
+Input:Enter first array: 1235
+Enter Second array: 2198
+Output: Uncommon elements:
+3
+5
+
+============================== Program 9
+
+Write a Java program to merge two given arrays.
+Array1= [10, 20, 30, 40, 50] Array2= [9, 18, 27, 36, 45]
+Output: Merged Array = [10, 20, 30, 40, 50, 9, 18, 27, 36, 45] 
+Hint: you can take 3rd array
+
+============================== Program 10
+
+WAP to print the elements whose addition of digits is even. Ex. 26=2+6=8 (8 is even so print 26)
+Input: Enter array: 1 2 3 5 15 16 14 28 17 29 123
+Output: 215 28 17 123
