@@ -102,7 +102,7 @@ class ArrayDemo{
         }
 }
 
-====================================================================
+======================= Take input from user in a array and a size of the array and print the no of odd and even numbers in the array ======================
 
 import java.io.*;
 
