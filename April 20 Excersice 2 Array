@@ -263,12 +263,57 @@ Output: Uncommon elements:
 3
 5
 
+===============================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.println("Enter the size");
+                int size = Integer.parseInt(br.readLine());
+
+                int arr[] = new int[size];
+                int arr1[] = new int[size];
+
+                System.out.println("Enter 1st array elements");
+                for(int i =0;i<arr.length;i++){
+
+                        arr[i] = Integer.parseInt(br.readLine());
+                }
+                System.out.println("Enter 2nd array elements");
+                for(int i =0;i<arr.length;i++){
+
+                        arr1[i] = Integer.parseInt(br.readLine());
+                }
+                for(int i = 0;i<size;i++){
+
+                        int match = 0;
+
+                        for(int j= 0;j<size;j++){
+                                if(arr[i]==arr1[j]){
+                                        match++;
+                                }
+                        }
+                        if(match==0){
+                                System.out.print(arr[i]+ " ");
+                                System.out.print(arr1[i]+ " ");
+                        }
+                }
+        }
+}
+
 ============================== Program 9
 
 Write a Java program to merge two given arrays.
 Array1= [10, 20, 30, 40, 50] Array2= [9, 18, 27, 36, 45]
 Output: Merged Array = [10, 20, 30, 40, 50, 9, 18, 27, 36, 45] 
 Hint: you can take 3rd array
+
+===============================================
+
+
 
 ============================== Program 10
 
