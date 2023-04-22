@@ -1,0 +1,196 @@
+=================================== Program 1 =======================================
+
+===================================  Solution  =======================================
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter the size of array : ");
+                int size = Integer.parseInt(br.readLine());
+                int arr[]=new int[size];
+
+                System.out.print("Enter array Elements : ");
+                for(int i = 0;i<arr.length;i++){
+                        arr[i]=Integer.parseInt(br.readLine());
+
+                }
+
+                System.out.println("Length of the element in array : ");
+                for(int i =0;i<arr.length;i++){
+                        int temp = arr[i];
+                        int sum = 0;
+                        while(temp>0){
+                                sum++;
+                                temp=temp/10;
+                        }
+                        System.out.print(sum+" ");
+                }
+        }
+}
+
+=================================== Program 2 =======================================
+
+===================================  Solution  =======================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter the size of array : ");
+                int size = Integer.parseInt(br.readLine());
+                int arr[]=new int[size];
+
+                System.out.println("Enter array Elements : ");
+                for(int i = 0;i<arr.length;i++){
+                        arr[i]=Integer.parseInt(br.readLine());
+
+                }
+
+                for(int i =0;i<arr.length;i++){
+                        int temp = arr[i];
+
+                        int rem=0;
+                        int rev=0;
+                        while(temp>0){
+                                rem = temp%10;
+                                rev = rev*10+rem;
+                                temp=temp/10;
+                        }
+                        System.out.print(rev+" ");
+                }
+        }
+}
+=================================== Program 3 =======================================
+
+===================================  Solution  =======================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter the size of array : ");
+                int size = Integer.parseInt(br.readLine());
+                int arr[]=new int[size];
+
+                System.out.println("Enter array Elements : ");
+                for(int i = 0;i<arr.length;i++){
+                        arr[i]=Integer.parseInt(br.readLine());
+
+                }
+
+                for(int i =0;i<arr.length;i++){
+                        int temp = arr[i];
+                        int sum = 0;
+                        for(int j = 1 ; j<arr[i];j++){
+                                if(arr[i]%j==0){
+                                        sum++;
+                                }
+                        }
+                        if (sum>1){
+                                System.out.print("Composite number : "+ arr[i]+"found at : "+i);
+                        }
+                }
+        }
+}
+=================================== Program 4 =======================================
+
+===================================  Solution  =======================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter the size of array : ");
+                int size = Integer.parseInt(br.readLine());
+                int arr[]=new int[size];
+
+                System.out.println("Enter array Elements : ");
+                for(int i = 0;i<arr.length;i++){
+                        arr[i]=Integer.parseInt(br.readLine());
+
+                }
+
+                for(int i =0;i<arr.length;i++){
+                        int temp = arr[i];
+                        int sum = 0;
+                        for(int j = 1 ; j<arr[i];j++){
+                                if(arr[i]%j==0){
+                                        sum++;
+                                }
+                        }
+                        if (sum<=1){
+                                System.out.print("Prime no : "+arr[i]+"found at index : " +i);
+                        }
+                }
+        }
+}
+=================================== Program 5 =======================================
+
+===================================  Solution  =======================================
+
+
+
+=================================== Program 6 =======================================
+
+===================================  Solution  =======================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter the size of array : ");
+                int size = Integer.parseInt(br.readLine());
+                int arr[]=new int[size];
+
+                System.out.println("Enter array Elements : ");
+                for(int i = 0;i<arr.length;i++){
+                        arr[i]=Integer.parseInt(br.readLine());
+
+                }
+
+                for(int i =0;i<arr.length;i++){
+                        int temp = arr[i];
+                        int rev = 0;
+                        int rem = 0;
+                        while(temp>0){
+                                rem = temp%10;
+                                rev = rev*10 + rem;
+                                temp = temp/10;
+                        }
+
+                        if (rev == arr[i]){
+                                System.out.println("Palindrome number : "+arr[i]+"found at index : " +i);
+                        }
+                }
+        }
+}
+
+=================================== Program 7 =======================================
+
+===================================  Solution  =======================================
+
+
+=================================== Program 8 =======================================
+
+===================================  Solution  =======================================
+
+
+=================================== Program 9 =======================================
+
+===================================  Solution  =======================================
+
+
+=================================== Program 10 =======================================
+
+===================================  Solution  =======================================
+
