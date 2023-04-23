@@ -1,5 +1,9 @@
 =================================== Program 1 =======================================
 
+Write a program to print count of digits in elements of array 
+Input: Enter array elementa: 02 255 2 1554 
+Output: 2 3 1 4
+
 ===================================  Solution  =======================================
 import java.io.*;
 
@@ -31,6 +35,11 @@ class ArrayDemo{
 }
 
 =================================== Program 2 =======================================
+WAP to reverse each element in an array Take size and elements from the user
+
+Input: 10 25 252 36 564
+
+Output: 01 52 252 63 465
 
 ===================================  Solution  =======================================
 
@@ -66,6 +75,11 @@ class ArrayDemo{
 }
 =================================== Program 3 =======================================
 
+WAP to find a composite number from an array and return its index. Take size and elements from the user 
+Input: 1 2 3 5 6 7
+
+Output: composite 6 found at index: 4
+
 ===================================  Solution  =======================================
 
 import java.io.*;
@@ -99,6 +113,11 @@ class ArrayDemo{
         }
 }
 =================================== Program 4 =======================================
+WAP to find a prime number from an array and return its index. Take size and elements from the user
+
+Input: 10 25 36 566 34 53 50 100
+
+Output: prime no 53 found at index: 5
 
 ===================================  Solution  =======================================
 
@@ -133,6 +152,11 @@ class ArrayDemo{
         }
 }
 =================================== Program 5 =======================================
+
+WAP to find a Perfect number from an array and return its index.
+Take size and elements from the user
+Input: 10 25 252 496 564
+Output: Perfect no 496 found at index: 3
 
 ===================================  Solution  =======================================
 
@@ -169,6 +193,9 @@ class ArrayDemo{
 }
 
 =================================== Program 6 =======================================
+WAP to find a palindrome number from an array and return its index. Take size and elements from the user
+Input: 10 25 252 36 564
+Output: Palindrome no 252 found at index: 2
 
 ===================================  Solution  =======================================
 
@@ -206,6 +233,9 @@ class ArrayDemo{
 }
 
 =================================== Program 7 =======================================
+WAP to find a Strong number from an array and return its index. Take size and elements from the user.
+Input: 10 25 252 36 564 145
+Output: Strong no 145 found at index: 5
 
 ===================================  Solution  =======================================
 
@@ -249,6 +279,9 @@ class ArrayDemo{
 
 =================================== Program 8 =======================================
 
+WAP to find an Armstong number from an array and return its index. Take size and elements from the user
+Input: 10 25 252 36 163 55 89
+Output: Armstrong no 153 found at index: 4
 ===================================  Solution  =======================================
 
 import java.io.*;
@@ -287,11 +320,16 @@ class ArrayDemo{
 }
 
 =================================== Program 9 =======================================
+Write a program to print the second max element in the array 
+Input: Enter array elements: 2 255 2 1554 15 65
+Output: 255
 
 ===================================  Solution  =======================================
 
 
 =================================== Program 10 =======================================
-
+Write a program to print the second min element in the array 
+Input: Enter array elements: 255 2 1554 15 65 95 89
+Output: 15
 ===================================  Solution  =======================================
 
