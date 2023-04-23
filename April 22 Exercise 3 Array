@@ -345,14 +345,8 @@ class ArrayDemo{
                         if(arr[i]>max){
                                 max2 = max;
                                 max = arr[i];
-                        }
-                        else if(arr[i]>max2 && arr[i]!=max2){
-                                max2 = arr[i];
-                        }
-                }
+                        }              
                 System.out.println(max2);
-
-
         }
 }
 
