@@ -146,6 +146,34 @@ Output: perfect numbers between 1 and 30
 6       28
 ======================================= SOLUTION ======================================
 
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.print("Enter starting digit : ");
+                int Sno = Integer.parseInt(br.readLine());
+
+                System.out.print("Enter ending digit : ");
+                int Eno = Integer.parseInt(br.readLine());
+
+                for(int i = Sno; i<= Eno; i++){
+                        int temp = i ;
+                        int sum = 0;
+                        for (int j = 1; j<i;j++){
+
+                                if(i%j==0){
+                                        sum = sum+j;
+                                }
+                        }
+                        if(sum == i){
+                                System.out.print(i + " ");
+                        }
+                }
+        }
+}
+
 ========================================= QUE 6 =====================================
 
 Write a program to take 5 numbers as input from the user and print the count of digits in those numbers.
