@@ -232,6 +232,36 @@ Output: Palindrome numbers between 100 and 250 101 111 121 131 141 151 161 171 1
 
 ======================================= SOLUTION ======================================
 
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.println("Enter Starting digit : ");
+                int Sno = Integer.parseInt(br.readLine());
+
+                System.out.println("Enter the end digit : ");
+                int Eno = Integer.parseInt(br.readLine());
+
+                System.out.println("Palindrome no between "+ Sno + " and " + Eno);
+
+                for(int i = Sno; i<= Eno; i++){
+                        int temp = i;
+                        int rem = 0;
+                        int rev = 0;
+                        while(temp>0){
+                                rem = temp%10;
+                                rev = rev*10 + rem;
+                                temp = temp/10;
+                        }
+                        if(rev == i){
+                                System.out.print(i+ " ");
+                        }
+                }
+        }
+}
+
 ========================================= QUE 9 =====================================
 write a program to print a series of strong numbers from entered range. (Take a start and end number from a user)
 Input:-Enter starting number: 1 Enter ending number: 150
