@@ -1,0 +1,38 @@
+======================================= NESTED FOR 6 ==========================================
+
+Take all the inputs from the user Use BufferedReader
+
+======================================== QUE 1 ===================================
+Write a program to print the numbers divisible by 5 from 1 to 50 & the number is even also print the count of even numbers.
+Input: Enter a lower limit: 1
+Enter upper limit: 50
+Output: 10, 20, 30, 40, 50 Count = 5
+
+====================================== SOLUTION =====================================
+
+====================================== QUE 2 ======================================
+
+Write a program to take range as input from the user and print composite numbers.
+Input: Enter start: 1 Enter end: 20
+Output: composite numbers between 1 and 20 4 6 8 9 10 12 14 15 16 18 20
+
+
+======================================= SOLUTION ======================================
+
+======================================= QUE 3 ======================================
+
+Write a program to take a range as input from the user and print perfect squares between that range.
+Input: Enter start: 1 Enter and: 100
+Output: perfect squares between 1 and 100
+
+
+========================================= SOLUTION ======================================
+
+========================================= QUE 4 =====================================
+
+Write a program to take a range as input from the user and print perfect cubes between that range.
+Input: Enter start: 1 Enter end: 100
+Output: perfect cubes between 1 and 100
+
+
+========================================= SOLUTION ======================================
