@@ -135,3 +135,40 @@ class ArrayDemo{
                 }
         }
 }
+
+========================================= QUE 5 =====================================
+
+Write a program to take range as input from the user and print perfect numbers (Note: Perfect number is the one whose perfect divisor's addition is equal to that
+6 is perfect number=1+2+3=6)
+Input. Enter start 1
+Enter end: 30
+Output: perfect numbers between 1 and 30
+6       28
+======================================= SOLUTION ======================================
+
+========================================= QUE 6 =====================================
+
+Write a program to take 5 numbers as input from the user and print the count of digits in those numbers.
+Input: Enter 5 numbers:
+5
+The digit count in 5 is 1
+25
+The digit count in 25 is 2
+225
+The digit count in 225 is 3
+6548
+The digit count in 6548 is 4
+852347
+The digit count in 852247 is 6
+
+======================================= SOLUTION ======================================
+
+========================================= QUE 7 =====================================
+
+Write a program to take range as input from the user and print the reverse of all start and end number from a user)
+numbers.
+Input: Enter start: 100
+Enter end: 200
+Output: Palindrome numbers between 100 and 250
+
+======================================= SOLUTION ======================================
