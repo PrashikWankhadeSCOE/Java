@@ -223,3 +223,31 @@ Enter end: 200
 Output: Palindrome numbers between 100 and 250
 
 ======================================= SOLUTION ======================================
+
+========================================= QUE 8 =====================================
+Write a program to take range as input from the user and print Palindrome numbers. (Take a start and end number from a user)
+Input: Enter start: 100
+Enter end: 250
+Output: Palindrome numbers between 100 and 250 101 111 121 131 141 151 161 171 181 191 202 212 222
+
+======================================= SOLUTION ======================================
+
+========================================= QUE 9 =====================================
+write a program to print a series of strong numbers from entered range. (Take a start and end number from a user)
+Input:-Enter starting number: 1 Enter ending number: 150
+Output:-
+Output: strong numbers between 1 and 150.
+1
+2
+145
+010
+======================================= SOLUTION ======================================
+
+========================================= QUE 10 =====================================
+
+Write a program to take range as input from the user and print Armstrong numbers. (Take a start and
+end number from a user)
+input: Enter start: 1 Enter end. 1650
+Output: Armstrong numbers between 1 and 1650 123456789 153 370 371 407 1634
+
+======================================= SOLUTION ======================================
