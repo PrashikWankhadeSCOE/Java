@@ -315,3 +315,35 @@ input: Enter start: 1 Enter end. 1650
 Output: Armstrong numbers between 1 and 1650 123456789 153 370 371 407 1634
 
 ======================================= SOLUTION ======================================
+
+import java.io.*;
+
+class ArrayDemo{
+        public static void main(String[] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                System.out.println("Enter Starting digit : ");
+                int Sno = Integer.parseInt(br.readLine());
+
+                System.out.println("Enter the end digit : ");
+                int Eno = Integer.parseInt(br.readLine());
+
+                System.out.println("Strong no between "+ Sno + " and " + Eno);
+
+                for(int i = Sno; i<= Eno; i++){
+                        int temp = i;
+                        int total = 0;
+
+                        while (temp>0){
+                                int remCube = 1;
+                                int rem = temp%10;
+                                remCube = rem*rem*rem;
+                                total = total + remCube;
+                                temp = temp/10;
+                        }
+                        if(total == i ){
+                                System.out.println(i);
+                        }
+                }
+        }
+}
