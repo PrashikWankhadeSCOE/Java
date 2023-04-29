@@ -332,12 +332,22 @@ class ArrayDemo{
 
                 for(int i = Sno; i<= Eno; i++){
                         int temp = i;
+                        int temp1 = i;
                         int total = 0;
+                        int sum = 0;
+
+
+                        while (temp1>0){
+                                sum++;
+                                temp1=temp1/10;
+                        }
 
                         while (temp>0){
                                 int remCube = 1;
                                 int rem = temp%10;
-                                remCube = rem*rem*rem;
+                                for(int j=1;j<=sum;j++){
+                                        remCube = remCube*rem;
+                                }
                                 total = total + remCube;
                                 temp = temp/10;
                         }
