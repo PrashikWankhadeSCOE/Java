@@ -1,0 +1,43 @@
+=========================  Creating Method for CompareTo  ====================
+
+
+import java.io.*;
+
+class Demo{
+
+        static boolean CompareToo(String str,String strr){
+
+                char [] arr1= str.toCharArray();
+                char [] arr2= strr.toCharArray();
+
+                int count = 0;
+                boolean end = false;
+                if(arr1.length==arr2.length){
+
+                        for(int i = 0;i<arr1.length;i++){
+
+                                if(arr1[i]==arr2[i]){
+                                        count++;
+                                }
+                                else{
+                                        break;
+                                }
+                        }
+                }
+                if(count == arr1.length){
+
+                        end = true;
+                }
+                return end;
+        }
+        public static void main(String [] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                                                                                                                                                                                                            String str1 = br.readLine();
+                String str2 = br.readLine();                                                                                                                                                
+                boolean value = CompareToo(str1,str2);
+                                                                                                                                                                                                            if(value){                                                                                                                                                                                          System.out.println("equal");
+                }                                                                                                                                                                                           else {                                                                                                                                                                                              System.out.println("Not equals");
+        }                                                                                                                                                                                   }
+}
+
+=============================================================================
