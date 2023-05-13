@@ -41,3 +41,38 @@ class Demo{
 }
 
 =============================================================================
+CREAING METHOD CONCATE STRINGS
+=============================================================================
+import java.io.*;
+
+class Demo{
+
+        static char[] ConcateStrings(String st,String stt){
+                char [] arr = st.toCharArray();
+                char [] arr1 = stt.toCharArray();
+
+                char [] finalarr = new char[arr.length+arr1.length];
+
+                for(int i = 0;i<finalarr.length;i++){
+                        for(int j = 0; j <arr.length;j++){
+                                finalarr[j]=arr[j];
+                        }
+                        for(int k= 0;k<arr1.length;k++){
+                                finalarr[k+arr.length]=arr1[k];
+                        }
+                }
+                return finalarr;
+        }
+
+
+        public static void main(String [] args)throws IOException{
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                String str1 = br.readLine();
+                String str2 = br.readLine();
+
+                System.out.println(ConcateStrings(str1,str2));
+
+        }
+}
