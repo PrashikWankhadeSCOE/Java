@@ -118,3 +118,40 @@ class Demo{
                 System.out.println(myCharAt(str1,a));
         }
 }
+=========================================================================
+Creating my CompareTo Method
+===========================================================================
+
+import java.io.*;
+
+class Demo{
+        static int myCompareTo(String str1,String str2){
+                char[] arr = str1.toCharArray();
+                char[] arr1 = str2.toCharArray();
+
+                if(arr.length!=arr1.length){
+                        int diff = arr.length-arr1.length;
+                        return diff;
+                }
+                else{
+                        int dif = 0;
+                        for(int i = 0;i<arr.length;i++){
+                                if(arr[i]!=arr1[i]){
+                                        dif = arr[i]-arr1[i];
+                                        break;
+                                }
+                        }
+                        return dif;
+                }
+        }
+
+
+        public static void main(String [] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                String str1 = br.readLine();
+                String str2 = br.readLine();
+
+                System.out.println(myCompareTo(str1,str2));
+        }
+}
