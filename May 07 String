@@ -1,11 +1,11 @@
-=========================  Creating Method for CompareTo  ====================
+=========================  Creating Method for Equals  ====================
 
 
 import java.io.*;
 
 class Demo{
 
-        static boolean CompareToo(String str,String strr){
+        static boolean Equalss(String str,String strr){
 
                 char [] arr1= str.toCharArray();
                 char [] arr2= strr.toCharArray();
@@ -34,7 +34,7 @@ class Demo{
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
                                                                                                                                                                                                             String str1 = br.readLine();
                 String str2 = br.readLine();                                                                                                                                                
-                boolean value = CompareToo(str1,str2);
+                boolean value = Equalss(str1,str2);
                                                                                                                                                                                                             if(value){                                                                                                                                                                                          System.out.println("equal");
                 }                                                                                                                                                                                           else {                                                                                                                                                                                              System.out.println("Not equals");
         }                                                                                                                                                                                   }
