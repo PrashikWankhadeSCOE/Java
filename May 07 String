@@ -76,3 +76,28 @@ class Demo{
 
         }
 }
+=====================================================================
+CREATING METHOD FOR MY STRING LENGTH
+====================================================================
+import java.io.*;
+
+class Demo{
+        static int myStrLen(String str){
+
+                char [] arr = str.toCharArray();
+                return arr.length;
+
+        }
+        public static void main(String [] args)throws IOException{
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                String str1 = br.readLine();
+
+                System.out.println(myStrLen(str1));
+        }
+}
+
+==========================================================================
+
+==========================================================================
