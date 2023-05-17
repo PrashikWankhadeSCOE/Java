@@ -1,0 +1,32 @@
+Que 1 :
+Write a program to reverse a string
+Input : Core2Web
+Output : beW2eroC
+=======================================================================
+import java.io.*;
+
+class ReverseString{
+        static String Rev(String str){
+                StringBuffer sb = new StringBuffer(str);
+                StringBuffer sbr = sb.reverse();
+
+                String sb1 = new String(sbr);
+                return sb1;
+        }
+
+        public static void main(String [] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                String str = br.readLine();
+
+                System.out.println(Rev(str));
+        }
+}
+
+=======================================================================
+
+2) Write a program to check if two strings are Anagram or not(An anagram of a string is another 
+string that contains the same characters, only the order of characters can be different. For example, 
+“alekh” and “leakh” are an anagram of each other.)
+ input:- str1 =abc str2=bca
+ output : String is anagram
