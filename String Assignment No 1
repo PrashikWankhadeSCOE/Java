@@ -199,3 +199,54 @@ class AreaTriangle{
 
         }
 }
+==============================================================================================
+Que 8:
+Write a real life example of your choice for classes and objects and constructors.
+=============================================================================================
+
+============================================================================================
+Que 9:
+Write a method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or
+not.
+ input:- AIEEE
+ output: True
+
+ input:- Aiew
+ output:- False
+===================================================================================================
+ import java.io.*;
+
+class VowStr{
+
+        static boolean VowString(String str){
+                char [] ch = str.toCharArray();
+                int count = 0;
+                for(int i = 0; i <ch.length;i++){
+                        if(ch[i]=='a'||ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u'||ch[i]=='A'||ch[i]=='E'||ch[i]=='I'||ch[i]=='O'||ch[i]=='U'){
+                                count++;
+                        }
+
+                }
+                if(count == ch.length){
+                        return true;
+                }
+                else {
+                        return false;
+                }
+        }
+
+        public static void main(String [] args)throws IOException{
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                String str = br.readLine();
+
+                if(VowString(str)){
+                        System.out.println("String has only Vowels");
+                }
+                else {
+                        System.out.println("Some Character are other than Vowels");
+                }
+        }
+}
+===================================================================================================
