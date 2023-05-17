@@ -131,3 +131,51 @@ class NonRepeatingChar{
                 NonRC(str);
         }
 }
+=======================================================================================
+Que 6
+Write a Java method to check whether a string is a valid password(return true if password length is
+greater than 8, it contains atleast one alphabet and number)
+ input:- number123
+ output: valid password
+ input:- number
+ output: invalid password
+
+=========================================================================================
+import java.io.*;
+
+class Pass{
+        static boolean Password(String str){
+                char [] arr = str.toCharArray();
+                int count = 0;
+                for(int i = 0; i<arr.length;i++){
+                        int ch = arr[i];
+                        if(ch>64 && ch<91 || ch>96 && ch<123){
+                                count++;
+                                break;
+                        }
+                }
+                if(arr.length>7 && count >0){
+                        return true;
+                }
+                else{
+                        return false;
+                }
+        }
+        public static void main(String [] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                String str = br.readLine();
+
+                if(Password(str)){
+                        System.out.println("Perfect Password");
+                }
+                else{
+                        System.out.println(" Error : Please choose Strong password");
+                }
+        }
+}
+
+======================================================================================
+Que 7 :
+Write a method to calculate triangle area(take required inputs from the user)
+========================================================================================
