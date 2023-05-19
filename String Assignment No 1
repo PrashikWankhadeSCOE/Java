@@ -203,7 +203,35 @@ class AreaTriangle{
 Que 8:
 Write a real life example of your choice for classes and objects and constructors.
 =============================================================================================
+class Ipl{
+        int jerNo = 18;
+        static String Team = "RCB";
+        String name = "Virat";
 
+        void PlayerInfo(){
+                System.out.println(jerNo);
+                System.out.println(name);
+                System.out.println(Team);
+        }
+}
+class Player{
+        public static void main(String [] args){
+                Ipl p1 = new Ipl();
+                Ipl p2 = new Ipl();
+
+                p1.PlayerInfo();
+                p2.PlayerInfo();
+
+                System.out.println("=========================================");
+
+                p2.jerNo = 46;
+                p2.name = "Rohit";
+                p2.Team = "Mi";
+
+                p1.PlayerInfo();
+                p2.PlayerInfo();
+        }
+}
 ============================================================================================
 Que 9:
 Write a method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or
