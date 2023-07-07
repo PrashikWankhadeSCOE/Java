@@ -1,0 +1,24 @@
+// Basic Inheritance 
+
+class ICC{                                                          //Parent Class 
+        ICC(){                                                      // Parent Constructor                                                                          
+                System.out.println(" In ICC Constructor");
+        }
+}
+class BCCI extends ICC{                                             // BCCI is Child of ICC (extends represents the child-parent relationship)   
+        BCCI(){                                                     // Child Constructor (inside constructor of each class there is a invokespecial line which represents calling the parent class constructor which results in the output printing the data in parent constructor 1st)
+                System.out.println( "In BCCI Constructor");
+        }
+}
+class Client{
+        public static void main(String [] a){
+                BCCI JayShah = new BCCI();                         // Creating the objecct of child class , Creating will directly call the class constructor
+        }
+}
+
+/*Output :
+
+In ICC Constructor
+In BCCI Constructor
+*/
+
