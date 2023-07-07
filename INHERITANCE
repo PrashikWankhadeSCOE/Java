@@ -22,3 +22,45 @@ In ICC Constructor
 In BCCI Constructor
 */
 
+// Program 2
+
+class Parent {
+        Parent(){
+                System.out.println("In Parent Constructor");
+        }
+        void ParentProperty(){
+                System.out.println("Flat,Car,Gold");
+        }
+}
+
+class Child extends Parent{
+        Child(){
+                System.out.println("In Child Constructor");
+        }
+        void Marry(){
+                System.out.println("Deepika Padukone");
+        }
+}
+
+class Client {
+        public static void main(String [] a){
+                Child obj = new Child();
+                obj.ParentProperty();
+                obj.Marry();
+
+                Parent obj1 = new Child();
+                //obj1.Marry();                                 // Error bcoz while compiling it will bind Marry method to Parent but in parent class there is no Marry method so there is error
+        }
+}
+
+/*
+Output 
+In Parent Constructor
+In Child Constructor
+Flat,Car,Gold
+Deepika Padukone
+In Parent Constructor
+In Child Constructor
+*/
+
+Program 3
