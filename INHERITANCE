@@ -145,3 +145,52 @@ y=20
 x=10
 y=20
 */
+
+//Program 5
+
+// super used forcalling parent class variables
+
+
+class Parent{
+        int x = 10;
+        static int y = 20;
+
+        Parent(){
+                System.out.println("In Parent Constructor");
+        }
+}
+
+class Child extends Parent{
+        int x = 100;
+        static int y = 200;
+
+        Child(){
+                System.out.println("In Child Constructor");
+        }
+
+        void access(){
+                System.out.println(x);
+                System.out.println(y);
+                System.out.println(super.x);                    //super is used to call the parent variable or parents things
+                System.out.println(super.y);
+        }
+}
+
+class Client {
+        public static void main(String [] ar){
+                Child obj = new Child();
+
+                obj.access();
+        }
+}
+
+/*
+Output
+In Parent Constructor
+In Child Constructor
+100
+200
+10
+20
+*/
+
