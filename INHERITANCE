@@ -63,4 +63,38 @@ In Parent Constructor
 In Child Constructor
 */
 
-Program 3
+//Program 3
+// Static in inheritance
+
+class Parent{
+        static {
+                System.out.println("in parent Static ");
+        }
+        Parent(){
+                System.out.println("in Parent constructor");
+        }
+}
+class Child extends Parent {
+        Child(){
+                System.out.println("in child Constructor");
+        }
+
+        static {                                                //Static comes 1st in the class before execution of anything ,Static runs directly on stackframe withoud making obj and anything
+
+                System.out.println("In Child Static");
+        }
+}
+class Client {
+        public static void main(String [] a){
+                Child obj = new Child();
+        }
+}
+
+/*
+Output :
+in parent Static
+In Child Static
+in Parent constructor
+in child Constructor
+*/
+
