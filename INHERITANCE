@@ -98,3 +98,50 @@ in Parent constructor
 in child Constructor
 */
 
+//Program 4
+//Static variable and methods 
+
+class Parent{
+        int x = 10;
+        static int y = 20;
+
+        static{
+                System.out.println("In Parent Static");
+        }
+        Parent(){
+                System.out.println("In Parent Constructor");
+        }
+        void methodOne(){
+                System.out.println("y="+y);                     //not static has access to static aswellas non static
+                System.out.println("x="+x);
+        }
+        static void methodTwo(){                                // static has access to static only non static variables can not be accessed from static context
+                System.out.println("y="+y);
+        }
+}
+class Child extends Parent{
+        Child(){
+                System.out.println("In Child Constructor");
+        }
+        static {
+                System.out.println(" In Child static");
+        }
+}
+class Client {
+        public static void main(String [] args){
+                Child obj = new Child();
+                obj.methodOne();
+                obj.methodTwo();
+        }
+}
+
+/*
+Output :
+In Parent Static
+In Child static
+In Parent Constructor
+In Child Constructor
+y=20
+x=10
+y=20
+*/
