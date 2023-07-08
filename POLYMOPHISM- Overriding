@@ -33,3 +33,34 @@ In Child Constructor
 Car, Flat, farm, Gold
 Alia Bhatt
 */
+
+//Program 2 
+
+class Parent{
+        Parent(){
+                System.out.println("In Parent Constructor");
+        }
+        void fun(){
+                System.out.println("in fun Parent");
+        }                                                       // Parent class has 2 methods 1. Parent constructor 2.fun                                         
+}
+class Child extends Parent{
+        Child(){
+                System.out.println("In Child Constructor");
+        }
+        void gun(){
+                System.out.println("in gun Child");
+        }                                                        // Child class has three methods 1.Child() Constructor 2.fun 3.gun 
+}
+class Client {
+        public static void main(String [] ars){
+                Parent obj = new Child();
+                obj.gun();                                        // Symbol not found bcoz while compiling the compiler checks the reference side only so it will try to find gun method in Parent class since there is no gun method in parent class it will show error
+        }
+}
+
+/*
+Symbol not found
+*/
+
+
