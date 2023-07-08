@@ -1,0 +1,49 @@
+// Overloading ( Type of polymorphism which occurs in same class)
+
+class Demo {
+        void fun(int x){                //method signature == fun(int)
+                System.out.println(x);
+        }
+        void fun(int y ){               //method signature == fun(int)
+                System.out.println(y);
+        }                               //both method signature are same, signature table is made while compiling so compiler will give error, method fun is already defined
+}
+
+//Program 2
+// Overloading
+
+
+class Demo{
+        void fun(int x){                      //Method Signature == fun(int)
+                System.out.println(x);
+        }
+        void fun(float x){                     //Method Signature == fun(float)
+                System.out.println(x);
+        }
+        void fun(Demo obj){                    //Method Signature == fun(Demo)
+                System.out.println("In Demo");
+                System.out.println(obj);
+        }
+        public static void main(String [] args){
+                Demo obj = new Demo();
+                obj.fun(10);
+                obj.fun(10.5f);
+
+                Demo obj1 = new Demo();
+                obj.fun(obj1);
+
+                obj1.fun(obj);
+
+
+        }
+}
+
+/*
+Output
+10
+10.5
+In Demo
+Demo@49476842
+In Demo
+Demo@78308db1
+*/
