@@ -101,3 +101,20 @@ in gun Child
 */
 
 //Program 4
+class Parent {
+        void fun(){                                     //This method belongs to Parent class
+                System.out.println("in fun Parent");
+        }
+}
+class Child extends Parent{
+        void fun(int x){                                //This method is only belonging to Child class this is not over riding method as the method signature of both the method is different
+                System.out.println("In fun Child");
+        }
+}
+class Client{
+        public static void main(String [] a){
+                Parent obj = new Child();
+                obj.fun(10);                            //here we tried to call the method fun(int) which is not present in parent so it will show error
+                obj.fun()                               //This will call the method form parent class as it will bind it while compiling to the same class
+        }
+}
