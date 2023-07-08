@@ -56,11 +56,48 @@ class Client {
         public static void main(String [] ars){
                 Parent obj = new Child();
                 obj.gun();                                        // Symbol not found bcoz while compiling the compiler checks the reference side only so it will try to find gun method in Parent class since there is no gun method in parent class it will show error
-        }
+        }                                                        
 }
 
 /*
 Symbol not found
 */
 
+ // if gun method would be present in Parent class the it would have print the gun method belonging to child as the obj created is of child class
+//Program 3
 
+class Parent{
+        Parent(){
+                System.out.println("In Parent Constructor");
+        }
+        void fun(){
+                System.out.println("in fun Parent");
+        }       
+        void gun(){
+                System.out.println("In Gun Parent");
+        }
+}
+
+class Child extends Parent{
+        Child(){
+                System.out.println("In Child Constructor");
+        }
+        void gun(){
+                System.out.println("in gun Child");
+        }                                                       
+}
+class Client {
+        public static void main(String [] ars){
+                Parent obj = new Child();
+                obj.gun();                                       
+        }
+}
+
+/*
+Output 
+In Parent Constructor
+In Child Constructor
+in gun Child
+*/
+
+//Program 4
