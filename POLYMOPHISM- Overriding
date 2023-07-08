@@ -118,3 +118,41 @@ class Client{
                 obj.fun()                               //This will call the method form parent class as it will bind it while compiling to the same class
         }
 }
+
+//Program 5 and Program 6 
+// Ambiquity
+
+class Parent{
+        void fun(int x,float y){
+                System.out.println("in parent fun");
+        }
+        void fun(float x , int y){
+                System.out.println("in 2nd fun");
+        }
+}
+class Client{
+        public static void main(String[] arg){
+                Parent obj = new Parent();
+                obj.fun(10,10.5f);
+                obj.fun(10.5f,10);
+                obj.fun(10,10);                         //reference to fun in ambiquious as both fun methods match , above to method works fine but ambiquity error is shown when the condition arrises if you dont call such method then there will not be error
+
+        }
+}
+//Program 6
+
+class Demo{
+        void fun(String str){
+                System.out.println("String");
+        }
+        void fun(StringBuffer sb){
+                System.out.println("StringBuffer");
+        }
+        public static void main(String [] args){
+                Demo obj = new Demo();
+                obj.fun("String ahe ka ");                    //String   
+                obj.fun(new StringBuffer("StringBuffer"));    // StringBuffer
+
+                obj.fun(null);                                // ambiqueous 
+        }
+}
