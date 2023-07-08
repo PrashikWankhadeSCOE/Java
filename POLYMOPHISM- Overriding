@@ -1,0 +1,35 @@
+//Program 1 Overriding basic
+
+class Parent {
+        Parent(){
+                System.out.println("in Parent Constructor");
+        }
+        void Property(){
+                System.out.println("Car, Flat, farm, Gold");
+        }
+        void Marry(){                                           // overridden method
+                System.out.println("Dipika Padukone");
+        }
+}
+class Child extends Parent {
+        Child(){
+                System.out.println("In Child Constructor");
+        }
+        void Marry(){                                           // this method will override method from parent
+                System.out.println("Alia Bhatt");
+        }
+}
+class Client{
+        public static void main(String []a ){
+                Child obj = new Child();
+                obj.Property();
+                obj.Marry();
+
+        }
+}
+/*
+in Parent Constructor
+In Child Constructor
+Car, Flat, farm, Gold
+Alia Bhatt
+*/
