@@ -236,3 +236,25 @@ class Child extends Parent{
                 System.out.println("In fun child");
         }
 }
+
+//Program 11 
+//Static in overriding
+
+class Parent {
+        static void fun(){
+                System.out.println("In fun Parent");
+        }
+}
+class Child extends Parent{
+        static void fun(){
+                System.out.println("in fun Child");
+        }
+}
+class Client{
+        public static void main(String [] ar){
+                Parent p = new Child();                 // it will bind and call directly to fun method in parent as static is called fifrst before anything                p.fun();
+
+                Child c = new Child();
+                c.fun();                                //it will call the fun in child
+        }
+}
