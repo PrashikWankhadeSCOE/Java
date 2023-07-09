@@ -183,3 +183,23 @@ class Client{
         }
 }
 
+//Program 8
+//Access Specifier
+
+class Parent{
+        public void fun(){                              //Access Specifier == public
+                System.out.println("In Fun Parent");
+        }
+}
+class Child extends Parent{
+        void fun(){                                     //Access Specifier == default ::: attempting to access weaker access specifier :: error
+                System.out.println("In fun child");
+        }
+}
+class Client{
+        public static void main(String [] a){
+                Parent p = new Child();
+                p.fun();
+        }
+}
+
