@@ -203,3 +203,23 @@ class Client{
         }
 }
 
+
+// Program 9 
+// Private access specifier
+class Parent{
+        private void fun(){                             // private access specifier can not be accessed from out of the class
+                System.out.println("In parent fun");
+        }
+}
+class Child extends Parent{
+        void fun(){
+                System.out.println("In child fun");
+        }
+}
+class Client {
+        public static void main(String [] arg){
+                Parent p = new Child();
+                p.fun();
+        }
+}
+
