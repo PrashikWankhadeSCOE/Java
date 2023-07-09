@@ -156,3 +156,30 @@ class Demo{
                 obj.fun(null);                                // ambiqueous 
         }
 }
+
+
+// Program 7
+// Return Type scenario
+
+class Parent {
+        Parent(){
+                System.out.println("In Parent constructor");
+        }
+        char fun(){
+                System.out.println("In Fun Parent");
+                return 'S';
+        }
+}
+class Child extends Parent{
+        int fun(){                                        //fun() in Child cannot override fun() in Parent , return type is not compatible with char
+                System.out.println("in fun Child");
+                return 10;
+        }
+}
+class Client{
+        public static void main(String [] a){
+                Parent p = new Child();
+                p.fun();
+        }
+}
+
