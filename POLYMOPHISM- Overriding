@@ -223,3 +223,16 @@ class Client {
         }
 }
 
+//Program 10
+// final 
+
+class Parent {
+        final void fun(){                                       //final method cannot be overriden
+                System.out.println("In fun Parent final");
+        }
+}
+class Child extends Parent{
+        void fun(){
+                System.out.println("In fun child");
+        }
+}
