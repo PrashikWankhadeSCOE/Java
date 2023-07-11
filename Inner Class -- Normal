@@ -69,3 +69,15 @@ class Outer{
                 static int l = 50;                        // error as above
         }
 }
+
+// Program 4
+// Simillarly we can not declare the static variable inside inner class 
+
+class Outer {
+        int x = 10;
+        static int y = 0;
+        class Inner{
+                int a = 10;
+                static int b = 20;                         // Illegal static declaration in Inner class
+        }
+}
