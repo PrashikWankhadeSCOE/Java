@@ -1,0 +1,18 @@
+// Program 1 
+// 
+
+class Demo{
+        void marry(){
+                System.out.println("you have to marry kriti sanon ");
+        }
+}
+class Client{
+        public static void main(String[] ar){
+                Demo obj = new Demo(){                                              // anonymous inner class which is used just once // demo class is parent of the anonymous class created
+                        void marry(){
+                                System.out.println(" I will marry Disha Patani ");
+                        }
+                };
+                obj.marry();
+        }
+}
