@@ -31,3 +31,24 @@ Output
  In outer = fun
  In Inner = fun
  In Inner = fun
+
+
+// Program 2 
+// anything in the outer class can be accessed from the inner class
+// like method and variables
+
+class Outer{
+        int x = 100;
+        int y = 200;
+        class Inner {
+                void fun(){
+                        System.out.println("fun inner");
+                        System.out.println(x);
+                        System.out.println(y);
+                        gun();
+                }
+        }
+        void gun(){
+                System.out.println("gun outer");
+        }
+}
