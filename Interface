@@ -1,0 +1,26 @@
+//Program 1 
+// Interface has 100% abstraction 
+//object of interface can not be created
+//compiler by default gives public and abstract specifier itself
+//while overriding the method from interface we have to write public access specifier 
+
+
+interface Demo{                                         // Interface is 100% abstraction no method has body
+        void fun();                                     // method without body
+        void gun();                                     // public abstract void gun() by default compiler adds itself before method in interface
+}
+class DemoChild implements Demo{
+        public void fun(){                              // abstract method given body in Child class
+                System.out.println("In fun");
+        }
+        public void gun(){                              // but while giving body to method from interface we have to write public compulsary as if we dont write compiler will consider it as default and it will show error of assigning weaker access specifier
+                System.out.println("In gun");
+        }
+}
+class Client {
+        public static void main(String[] args){
+                Demo obj = new DemoChild();             // object of interface can not be created so we have created object of Child class giving reference of Parent Class
+                obj.fun();
+                obj.gun();
+        }
+}
