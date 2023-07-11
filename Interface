@@ -98,3 +98,28 @@ class Client {
 // Program 5
 // we can give body to methods in java from version 1.8
 
+interface Demo1{
+        static void m1(){
+                System.out.println("in Demo1 - m1");
+        }
+}
+interface Demo2{
+        static void m1(){
+                System.out.println("In Demo2 - m1");
+        }
+}
+class DemoChild implements Demo1,Demo2{
+}
+class Client {
+        public static void main(String[] args){
+/*
+                Demo2 obj = new DemoChild();
+                obj.m1();                               //illegal static interface method call
+
+                Demo1 obj1 = new DemoChild();
+                obj1.m1();
+*/
+                Demo1.m1();                             // static method should be called by using name of class only
+
+        }
+}
