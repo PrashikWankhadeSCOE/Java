@@ -53,3 +53,21 @@ class Client {
         }
 }
 
+//Program 3
+// It supports multiple inheritance which is not supported by class 
+
+interface Demo{
+        void fun();
+}
+interface Demo2{
+        void gun();
+}
+class Child implements Demo,Demo2{
+        public void fun(){
+                System.out.println("In fun");
+        }
+        public void gun(){
+                System.out.println("in gun");
+        }
+}
+
