@@ -24,3 +24,32 @@ class Client {
                 obj.gun();
         }
 }
+
+
+// it supports multi-level inheritance 
+//Program 2
+
+interface Demo{                                         // interface has 2 methods
+        void fun();
+        void gun();
+}
+abstract class DemoChild1 implements Demo{              //it has 2 abstract method coming from parent but 1 method is not given body in DemoChild class fun() so the class is abstract
+        public void gun(){
+                System.out.println("In gun");
+        }
+}
+class DemoChild2 extends DemoChild1{                    //it has 1 abstract method coming from parent nut it has given body to it so it is now 100% non abstract
+
+        public void fun(){
+                System.out.println("In fun");
+        }
+}
+
+class Client {
+        public static void main(String [] a){
+                Demo obj = new DemoChild2();
+                obj.gun();
+                obj.fun();
+        }
+}
+
