@@ -52,3 +52,20 @@ class Outer{
                 System.out.println("gun outer");
         }
 }
+
+//Program 3 
+//static can be only written in class not in methods because static is 1st that goes on stack frame so we have to declare all static first in the class
+
+class Outer{
+        int x = 10;
+        static int y = 20;
+
+        void m1(){
+                int a = 100;
+                static int b = 200;                        // error illegal start of expression
+        }
+        public static void main(String [] args){
+                int z = 40;
+                static int l = 50;                        // error as above
+        }
+}
