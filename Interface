@@ -208,3 +208,23 @@ class Client{
 }
 
 // if it had been class then there would be no error ..static method is class is comes to the child class by inheritance but not in interface 
+
+//Program 9 
+// variables in Interface 
+
+interface Demo {
+        int x = 10;                                        // internally it goes like ===== // public static final int x ;
+        void fun();                                        // internally it goes like ===== // public abstract void fun();
+}
+class DemoChild implements Demo{
+        public void fun(){
+                System.out.println(x);                      // here the x is inherited from the parent class
+                System.out.println(Demo.x);                 // here it is access the x in demo class       
+        }
+}
+class Client {
+        public static void main(String[] args){
+                Demo obj = new DemoChild();
+                obj.fun();
+        }
+}
