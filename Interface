@@ -186,3 +186,25 @@ class Client{
                 obj2.fun();
         }
 }
+
+//Program 8
+//static in interface is different from static in class 
+
+interface Demo{
+        static void fun(){
+
+                System.out.println("In fun");
+        }
+}
+class DemoChild implements Demo{
+
+}
+class Client{
+        public static void main(String [] a){
+                DemoChild obj = new DemoChild();
+                obj.fun();                                // error can not find symbol
+
+        }
+}
+
+// if it had been class then there would be no error ..static method is class is comes to the child class by inheritance but not in interface 
