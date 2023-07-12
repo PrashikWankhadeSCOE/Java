@@ -123,3 +123,36 @@ class Client {
 
         }
 }
+
+//Program 6 
+// default can be overridden 
+// static can not be overriden 
+// we have to call static method by class name but to access default we have to create a obj
+interface Demo{
+        static void fun(){
+                System.out.println("In fun Demo");
+        }
+        default void gun(){
+                System.out.println("In gun Demo");
+        }
+}
+class DemoChild implements Demo{
+        public void gun(){                              //default method can be override
+                System.out.println("In gun Child");
+        }
+        public static void fun(){                               // Static method cant be override its a method hiding
+                System.out.println("In fun Child");
+        }
+}
+class Client{
+        public static void main(String [] a){
+                Demo obj = new DemoChild();
+                obj.gun();
+
+                //obj.fun();                            // Error fun cannot be called by obj we have to call it by class name
+                DemoChild.fun();
+                Demo.fun();
+        }
+}
+
+
