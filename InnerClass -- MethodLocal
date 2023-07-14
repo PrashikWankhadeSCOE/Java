@@ -1,0 +1,28 @@
+class Outer {
+        void m1(){
+                System.out.println("In m1 - Outer ");
+
+                class Inner{
+                        void InnerM1(){
+                                System.out.println("In m1 - Inner");
+                        }
+                }
+                Inner obj = new Inner();
+                obj.InnerM1();
+        }
+        void m2(){
+                System.out.println("In Outer- m2");
+        }
+}
+class Client{
+        public static void main(String [] args){
+                Outer obj = new Outer();
+                obj.m1();
+                obj.m2();
+        }
+}
+
+// 3 files will be created 
+// Client.class  'Outer$1Inner.class'   Outer.class   
+// 'Outer$1Inner.class' === 1 here represents the level of the inner class from the outer class
+
