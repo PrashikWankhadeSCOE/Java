@@ -142,3 +142,43 @@ class Program7{
 
 Program 8 :
 
+
+
+Program 9 :
+
+
+import java.util.*;
+
+class Demo{
+        public static void main(String[] args){
+                Scanner sc = new Scanner(System.in);
+
+                int x = sc.nextInt();
+                int [] arr = new int[x];
+
+                for(int i= 0; i<arr.length;i++){
+                        arr[i]= sc.nextInt();
+                }
+                for (int i = 0;i<arr.length;i++){
+                        if(Strong(arr[i])==arr[i]){
+                                System.out.println(arr[i]);
+                        }
+                }
+        }
+        static int Strong(int x){
+                int temp = x;
+                int sum = 0;
+                while(temp>0){
+                        int temp1 = temp%10;
+                        int fact = 1;
+                        while(temp1>0){
+                                fact = fact*temp1;
+                                temp1--;
+                        }
+                        sum = sum + fact;
+                        temp= temp/10;
+                }
+
+                return sum;
+        }
+}
