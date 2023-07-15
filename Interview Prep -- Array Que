@@ -338,3 +338,33 @@ class Demo{
                 }
         }
 }
+
+Program 6 ::
+
+import java.util.*;
+
+class Demo{
+        public static void main(String [] args){
+                Scanner sc = new Scanner(System.in);
+
+                int arr[] = {1,2,3,4,5,};
+                int arr1[] = new int[arr.length];
+
+                int x = sc.nextInt();
+                int n = 0;
+
+                for(int i = 0;i <arr.length;i++){
+                        if(x == arr[i]){
+
+                        }
+                        else{
+                                arr1[n]=arr[i];
+                                n++;
+                        }
+                }
+                for(int i =0;i<arr1.length;i++){
+                        System.out.println(arr1[i]);
+                }
+        }
+}
+
