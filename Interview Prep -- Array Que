@@ -260,3 +260,28 @@ class Demo{
 }
 
 Program 3 ::
+import java.util.*;
+
+class Demo{
+        public static void main(String [] ag){
+                Scanner sc = new Scanner(System.in);
+                int x = sc.nextInt();
+                int arr[] = new int[x];
+
+                for(int i = 0;i<arr.length;i++){
+                        arr[i]=sc.nextInt();
+                }
+                int e = 0;
+                int o = 0;
+
+                for(int i = 0;i<arr.length;i++){
+                        if(arr[i]%2 == 0){
+                                e++;
+                        }
+                        else{
+                                o++;
+                        }
+                }
+                System.out.println("even count is "+e+"\n"+"odd count is "+o);
+        }
+}
