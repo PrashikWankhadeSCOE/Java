@@ -312,3 +312,29 @@ class Demo{
                 System.out.println("even count is "+esum+"\n"+"odd count is "+osum);
         }
 }
+
+
+Program 5 ::
+
+import java.util.Scanner;
+
+class Demo{
+        public static void main(String [] ar){
+                int arr1[] ={1,2,3,4,5};
+                int arr2[] = {6,7,8,9,10};
+
+                int merg[] = new int[arr1.length+arr2.length];
+
+                for(int i = 0;i<merg.length;i++){
+                        if(i<arr1.length){
+                                merg[i]=arr1[i];
+                        }
+                        else{
+                                merg[i]=arr2[i-arr1.length];
+                        }
+                }
+                for(int i = 0;i<merg.length;i++){
+                        System.out.print(merg[i]+" ");
+                }
+        }
+}
