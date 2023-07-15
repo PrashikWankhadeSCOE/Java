@@ -285,3 +285,30 @@ class Demo{
                 System.out.println("even count is "+e+"\n"+"odd count is "+o);
         }
 }
+
+Program 4 :: 
+import java.util.*;
+
+class Demo{
+        public static void main(String [] ag){
+                Scanner sc = new Scanner(System.in);
+                int x = sc.nextInt();
+                int arr[] = new int[x];
+
+                for(int i = 0;i<arr.length;i++){
+                        arr[i]=sc.nextInt();
+                }
+                int esum = 0;
+                int osum = 0;
+
+                for(int i = 0;i<arr.length;i++){
+                        if(arr[i]%2 == 0){
+                                esum= esum+arr[i];
+                        }
+                        else{
+                                osum = osum+ arr[i];
+                        }
+                }
+                System.out.println("even count is "+esum+"\n"+"odd count is "+osum);
+        }
+}
