@@ -86,3 +86,52 @@ Main Start
 Exception occued devide by zero                                                // see here exception occured and the code has returned why did it occurred but still print the next line means the code ran till the end thats normal execution handeled by codeer
 End Main
 
+-------------------------------------- NullPointer Exception
+
+class Demo{
+        public static void main(String [] args){
+                Demo obj = new Demo();
+                obj.m1();
+                obj = null;
+                obj.m2();
+                System.out.println("End main");
+        }
+        void m1(){
+                System.out.println("in method m1 ");
+        }
+        void m2(){
+                System.out.println("In method m2");
+        }
+}
+// Output ::
+
+in method m1                                                        // It entered in the main method then called the m1 method by using obj object 
+Exception in thread "main" java.lang.NullPointerException           // but after that te object is made null and then we called the m2 which gave exception that the obj is null and method cannot be called 
+        at Demo.main(Program3.java:6)
+
+// This exception can be handeled as below
+class Demo{
+        public static void main(String [] args){
+                Demo obj = new Demo();
+                obj.m1();
+                obj = null;
+                try{
+                        obj.m1();
+                }catch(NullPointerException obj4){
+                        System.out.println("Exception");
+                }
+
+                System.out.println("End main");
+        }
+        void m1(){
+                System.out.println("in method m1 ");
+        }
+        void m2(){
+                System.out.println("In method m2");
+        }
+}
+
+//Output ::
+in method m1
+Exception
+End main
