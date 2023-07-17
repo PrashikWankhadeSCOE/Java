@@ -1,6 +1,6 @@
 ----------------------------- IOException 
 
-// We can see there is exception in this code 
+// We can see there is the exception in this code 
 
 import java.io.*;
 
@@ -15,7 +15,7 @@ class Demo{
 }
 
 //  Output 
-//Compile time exception can be considered as error // Also knows as checked Exception
+//Compile time exception can be considered as error // Also known as checked Exception
 
 error: unreported exception IOException; must be caught or declared to be thrown
                 int x = Integer.parseInt(br.readLine());
@@ -25,7 +25,7 @@ error: unreported exception IOException; must be caught or declared to be thrown
 import java.io.*;
 
 class Demo{
-        public static void main(String [] args)throws IOException{                              // we have handeled the exception by thrown method
+        public static void main(String [] args)throws IOException{                              // we have handled the exception by thrown method
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
                 int x = Integer.parseInt(br.readLine());
@@ -33,4 +33,56 @@ class Demo{
                 System.out.println(x);
         }
 }
+
+------------------------------  Arithmetic Exception 
+
+class Demo{
+
+        public static void main(String [] args){
+
+                System.out.println("Main Start");
+
+                int data = 10/0;
+
+                System.out.println(data);
+
+                System.out.println("End Main");
+
+        }
+}
+
+//Output :: Runtime Exception // also known as Unchecked Exception 
+Main Start                                                                                    // You can see that our code has printed the 1st Line of code as an entry
+Exception in thread "main" java.lang.ArithmeticException: / by zero                           // It has broken when there exception occurs and it also gave the reason for an exception as divided by zero 
+        at Demo.main(Program2.java:7)                                                         // this is the stack where the exception occurred 
+// The sequence of printing the exception is 1st. Tread Name 2nd. Exception name 3. Description 4. Stack trace
+//This exception is not handled by us so it has been handled by Default Exception Handler (DEH) 
+// DEH when handles the exception it breaks the code when the exception occurs means abnormal execution of code occurs
+
+Solution for this ::
+
+// We will use try catch method to handle the exception 
+
+class Demo{
+
+        public static void main(String [] args){
+
+                System.out.println("Main Start");
+                int data = 0;
+                try{                                                                //try method we have to write the risky code 
+                        data = 10/0;
+                        System.out.println(data);
+                }catch(ArithmeticException obj){                                    // here we have to write what should user see if he the code has exception    // here the imprtant this is to crate the object of the exe+ception or parent class's exception as it can be accepted  
+                        System.out.println("Exception occued devide by zero");
+                }
+
+                System.out.println("End Main");
+
+        }
+}
+
+//Output ::
+Main Start
+Exception occued devide by zero                                                // see here exception occured and the code has returned why did it occurred but still print the next line means the code ran till the end thats normal execution handeled by codeer
+End Main
 
