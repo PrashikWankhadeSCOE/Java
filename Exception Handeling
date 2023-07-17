@@ -172,3 +172,38 @@ Enter the Digit                                // in catch 1
 wankhade                                        // in try 2
 samjat nhi ka                                  // in catch 2 
 0
+
+------------------------------------- Finnaly-----------
+// in code whatever the exception occurs it will enter into finnaly and we can close all the open connections 
+// which helps code not to break or lose 
+// even if the exception is not known to us by going in to finally the code will break but its safety measure
+
+class Demo{
+        void m1(){
+        }
+        void m2(){
+        }
+        public static void main(String []a ){
+                Demo obj = new Demo();
+                obj.m1();
+
+                obj = null;
+
+                try{
+                        obj.m2();
+                }catch(ArithmeticException obj1){
+                        System.out.println("Exception here");
+                }
+                finally{
+                        System.out.println("Connection colsed");
+                }
+
+                System.out.println("End Main");
+        }
+}
+
+
+
+Connection colsed
+Exception in thread "main" java.lang.NullPointerException
+        at Demo.main(Program5.java:15)
