@@ -1,0 +1,36 @@
+----------------------------- IOException 
+
+// We can see there is exception in this code 
+
+import java.io.*;
+
+class Demo{
+        public static void main(String [] args){
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                int x = Integer.parseInt(br.readLine());
+
+                System.out.println(x);
+        }
+}
+
+//  Output 
+//Compile time exception can be considered as error // Also knows as checked Exception
+
+error: unreported exception IOException; must be caught or declared to be thrown
+                int x = Integer.parseInt(br.readLine());
+
+// Solution 1 
+
+import java.io.*;
+
+class Demo{
+        public static void main(String [] args)throws IOException{                              // we have handeled the exception by thrown method
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                int x = Integer.parseInt(br.readLine());
+
+                System.out.println(x);
+        }
+}
+
