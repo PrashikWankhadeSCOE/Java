@@ -307,3 +307,36 @@ Note : 0<Element<100
 150
 Exception in thread "main" DataOverException:  data enter is larger than 100 : plz read note and enter
         at Demo.main(Program8.java:28)
+
+//Real-time example 
+
+import java.util.*;
+
+class Less extends RuntimeException{
+        Less(String str){
+                super(str);
+        }
+}
+class Addmission{
+        public static void main(String [] args){
+                Scanner sc = new Scanner(System.in);
+
+                System.out.println("Enter the marks");
+
+                int marks = sc.nextInt();
+                int cutoff = sc.nextInt();
+
+                if(marks<cutoff){
+                        throw new Less("dusr clg bagh bhau aplya marks nusar");
+                }
+                System.out.println("Congratulations you are eligible for this college");
+        }
+}
+
+output
+
+Enter the marks
+89
+90
+Exception in thread "main" Less: dusr clg bagh bhau aplya marks nusar
+        at Addmission.main(Program9.java:18)
