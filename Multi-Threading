@@ -1,0 +1,22 @@
+// Multi-threading 
+// here are two threads 
+// both treads work simultaneously according to there priority given by the JVM 
+
+
+class MyThread extends Thread{
+        public void run(){                              // this method run() is overridden method from the Thread Class
+                for(int i = 0;i<10;i++){
+                        System.out.println("In run");
+                }
+        }
+}
+class ThreadDemo{
+        public static void main(String [] args){
+                MyThread obj = new MyThread();          // here we have created the obj of the class MyThread which will call the super in it which leads to the constructor of Thread class and in the Thread class there is a VMCreate method which will create a new thread 
+                obj.start();                            //This start method will start the newly created Thread which is created by the above object ------ and when we start without calling the method the thread will start running
+
+                for(int i = 0;i<10;i++){
+                        System.out.println("In main");
+                }
+        }
+}
