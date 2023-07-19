@@ -224,3 +224,36 @@ class StackDemo{
 
         }
 }
+
+
+//--------------------------- throw
+// we can print the statement that comes when excetion happens 
+// here we caught the exception and printed the same exception statement that is given by jvm 
+
+
+import java.util.*;
+
+class Demo{
+        public static void main(String [] args){
+                Scanner sc = new Scanner(System.in);
+
+                int x = sc.nextInt();
+
+                try{
+                        if(x == 0){
+                                throw new ArithmeticException("dev by zero");
+                        }
+                        System.out.println(10/x);
+                }catch(ArithmeticException ae){
+                        System.out.println("Exection in thread "+Thread.currentThread().getName()+ " ");
+                        ae.printStackTrace();
+                }
+        }
+}
+
+Output
+0
+Exection in thread main
+java.lang.ArithmeticException: dev by zero
+        at Demo.main(Program7.java:13)
+
