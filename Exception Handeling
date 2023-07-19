@@ -207,3 +207,20 @@ class Demo{
 Connection colsed
 Exception in thread "main" java.lang.NullPointerException
         at Demo.main(Program5.java:15)
+
+
+//---------------------------------------StackOverFlowError
+//
+class StackDemo{
+        static void fun(int x ){
+                fun(++x);
+        }
+        public static void main(String[] args){
+                try{
+                        fun(1);
+                }catch(StackOverflowError obj){
+                        System.out.println("Stack overflow");
+                }
+
+        }
+}
