@@ -257,3 +257,53 @@ Exection in thread main
 java.lang.ArithmeticException: dev by zero
         at Demo.main(Program7.java:13)
 
+// user define exceptions 
+//here we have created two exception classes and ..we have called the exception
+
+import java.util.*;
+
+class DataOverException extends RuntimeException{
+        DataOverException(String str){
+                super(str);
+        }
+}
+class DataUnderException extends RuntimeException{
+        DataUnderException(String str){
+                super(str);
+        }
+}
+class Demo{
+        public static void main(String [] args){
+                int arr[] = new int [5];
+
+                Scanner sc = new Scanner(System.in);
+
+                System.out.println("Enter integer value");
+                System.out.println("Note : 0<Element<100");
+
+                for(int i = 0;i<arr.length;i++){
+                        int data = sc.nextInt();
+                        if(data<0){
+                                throw new DataUnderException("data enter is less than zero : Plz read the note and enter");
+                        }
+                        if(data>100){
+                                throw new DataOverException(" data enter is larger than 100 : plz read note and enter");
+                        }
+                        arr[i] = data;
+                }
+                for(int i = 0; i < arr.length;i++){
+                        System.out.println(arr[i]);
+                }
+        }
+}
+
+Output 
+Enter integer value
+Note : 0<Element<100
+5
+4
+3
+4
+150
+Exception in thread "main" DataOverException:  data enter is larger than 100 : plz read note and enter
+        at Demo.main(Program8.java:28)
