@@ -46,3 +46,30 @@ class ThreadDemo{
                 }
         }
 }
+
+=============================================
+//do not do this code
+//wrong practice 
+
+class MyThread {
+        public void run(){
+                System.out.println("In run");
+                System.out.println(Thread.currentThread().getName());
+
+        }
+        public void start(){                                                    //bcoz of the below reason we dont have to write start method in out class where we definetly have to override the run method otherwise out class will be abstrat class
+                System.out.println("In myThreadStart");
+        }
+}
+class Demo{
+        public static void main(String []a ){
+                MyThread obj = new MyThread();
+                obj.start();                                                    // As we have seen when we call the start method the new thred start but here no new tread start becouse it is calling the start method of MyThread class created by us which will not start the tread thats why the call is not made to the run() method in out mythread class
+
+                System.out.println(Thread.currentThread().getName());
+        }
+}
+
+Output :
+In MYthreadStart
+main
