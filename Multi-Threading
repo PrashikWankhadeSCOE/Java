@@ -51,7 +51,7 @@ class ThreadDemo{
 //do not do this code
 //wrong practice 
 
-class MyThread {
+class MyThread extends Thread {
         public void run(){
                 System.out.println("In run");
                 System.out.println(Thread.currentThread().getName());
@@ -73,3 +73,38 @@ class Demo{
 Output :
 In MYthreadStart
 main
+
+
+================================================
+//Creating Multi Thread 
+// here we have created 3 threads
+
+class Demo extends Thread{
+        public void run(){
+                System.out.println("Demo :" + Thread.currentThread().getName());
+        }
+}
+class Mythread extends Thread{
+        public void run(){
+                System.out.println("Mythread :" + Thread.currentThread().getName());
+
+                Demo obj = new Demo();
+                obj.start();
+        }
+}
+class ThreadDemo{
+        public static void main(String[] args){
+
+                System.out.println("ThreadDemo :" + Thread.currentThread().getName());
+
+                Mythread obj = new Mythread();
+                obj.start();
+        }
+}
+
+Output :
+ThreadDemo :main
+Mythread :Thread-0
+Demo :Thread-1
+
+================================================
