@@ -107,4 +107,35 @@ ThreadDemo :main
 Mythread :Thread-0
 Demo :Thread-1
 
-================================================
+================================================ 2nd Way to create a new Thread
+
+// Creating a new Thread without extending the thread Class
+// This method can be used when the client wants to make thread in the child class
+// by using Runnable Interface We can create new thread in the child class
+// Thread class is in lang package so no need to import any package
+// Thread has many constructor one of which is Thread(Runnable r)  So we can give parameter of any class which is child of Runnable interface
+// here same out MyThread class is the child of runnable Interface so it can be given to thread constructor as parameter
+
+class MyThread implements Runnable{
+        public void run(){
+                System.out.println("In run");
+                System.out.println(Thread.currentThread().getName());
+        }
+}
+class Demo{
+        public static void main(String [] args){
+
+                MyThread obj = new MyThread();
+                Thread t = new Thread(obj);                             //
+                t.start();
+
+                System.out.println(Thread.currentThread().getName());
+        }
+}
+
+OutPut :
+
+main
+In run
+Thread-0
+
