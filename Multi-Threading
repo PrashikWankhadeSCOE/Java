@@ -324,3 +324,30 @@ class MyThread extends Thread{
 Output 
 Name
 java.lang.ThreadGroup[name=main,maxpri=10]
+
+========================================
+
+class ThreadDemo{
+        public static void main(String [] ag){
+                ThreadGroup GP = new ThreadGroup("MyGroup");
+
+                MyThread obj1 = new MyThread(GP,"Java");
+                MyThread obj2 = new MyThread(GP,"ReactJS");
+                MyThread obj3 = new MyThread(GP,"SpringBoot");
+
+                obj1.start();
+                obj2.start();
+                obj3.start();
+        }
+}
+class MyThread extends Thread{
+        MyThread(){
+                super();
+        }
+        MyThread(ThreadGroup gp,String str){
+                super(gp,str);
+        }
+        public void run(){
+                System.out.println(Thread.currentThread());
+        }
+}
