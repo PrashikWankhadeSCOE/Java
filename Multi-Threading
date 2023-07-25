@@ -244,6 +244,8 @@ In main
 In main
 
 ========================================
+// from this code we get to understand that this code has given dead condition both code are saying each other to complete first so no code will execute
+// so to avoid this condition we have to use join method with some time parameter
 
 class MyThread extends Thread{
         static Thread nmMain= null;
@@ -262,7 +264,7 @@ class MyThread extends Thread{
 }
 class ThreadDemo{
         public static void main(String [] args)throws InterruptedException{
-                Thread nmMain = Thread.currentThread();
+                MyThread.nmMain = Thread.currentThread();
 
                 MyThread obj = new MyThread();
                 obj.start();
@@ -274,3 +276,28 @@ class ThreadDemo{
                 }
         }
 }
+
+=======================================================Yeild method 
+//this is same as join method but before updates this was not native method
+// so calling this was different but now join method and yeild is nearly same
+
+class MyThread extends Thread{
+        public void run(){
+                System.out.println(getName());
+        }
+}
+class ThreadDemo{
+        public static void main(String [] arffs){
+                MyThread t = new MyThread();
+                t.start();
+
+                t.yield();
+
+                System.out.println(Thread.currentThread().getName());
+        }
+}
+
+Output 
+main
+Thread-0
+
