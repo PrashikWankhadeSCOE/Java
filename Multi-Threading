@@ -301,3 +301,26 @@ Output
 main
 Thread-0
 
+=========================
+//We have changed the name of our thread and also printed the group of the thread
+
+package Norm;
+
+public class ThreadDemo {
+	public static void main(String [] args) {
+		MyThread obj = new MyThread("Name");
+		obj.start();
+	}
+}
+class MyThread extends Thread{
+	MyThread(String str){
+		super(str);
+	}
+	public void run() {
+		System.out.println(getName());
+		System.out.println(Thread.currentThread().getThreadGroup());
+	}
+}
+Output 
+Name
+java.lang.ThreadGroup[name=main,maxpri=10]
