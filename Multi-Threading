@@ -195,3 +195,50 @@ Output
 Thread[main,5,main]
 Thread[Thread-0,5,main]
 Thread[MyThread_Main,5,main]
+
+===================================================== join method 
+// Join method is used to let other thread do its work before this thread 
+// the join method is called by the object and the thread which is created by that object is run before this thread
+// if we dont give time in the join method then till the other thread complete its work this thread will stay in reay to rn state
+
+class MyThread extends Thread{
+        public void run(){
+                for(int i = 0;i<10;i++){
+                        System.out.println("In Thread - 0");
+                }
+        }
+}
+class ThreadDemo{
+        public static void main(String [] args)throws InterruptedException{
+                MyThread t = new MyThread();
+                t.start();
+
+                t.join();
+
+                for(int i = 0;i<10;i++){
+                        System.out.println("In main");
+                }
+        }
+}
+
+Output
+In Thread - 0
+In Thread - 0
+In Thread - 0
+In Thread - 0
+In Thread - 0
+In Thread - 0
+In Thread - 0
+In Thread - 0
+In Thread - 0
+In Thread - 0
+In main
+In main
+In main
+In main
+In main
+In main
+In main
+In main
+In main
+In main
