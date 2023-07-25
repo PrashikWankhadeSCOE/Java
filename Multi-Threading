@@ -168,3 +168,30 @@ Output :
 5
 7
 
+================================================ Concurrency methods in Thread
+================================================ Sleep method
+//We also have used setName() method to change the name of the thread
+
+class MyThread extends Thread{
+        public void run(){
+                System.out.println(Thread.currentThread());
+        }
+}
+class ThreadDemo{
+        public static void main(String [] args)throws InterruptedException{
+                System.out.println(Thread.currentThread());
+
+                MyThread t = new MyThread();
+                t.start();
+
+                Thread.sleep(1000);
+                Thread.currentThread().setName("MyThread_Main");
+
+                System.out.println(Thread.currentThread());
+        }
+}
+
+Output 
+Thread[main,5,main]
+Thread[Thread-0,5,main]
+Thread[MyThread_Main,5,main]
