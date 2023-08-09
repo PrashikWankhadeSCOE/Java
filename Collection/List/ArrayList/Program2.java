@@ -10,11 +10,11 @@ class CricPlayer{
 		this.jerNo = jerNo;
 		this.name = name;
 	}
-	/*
+	
 	public String toString(){
 		return name;
 	}
-	*/
+	
 }
 
 class Demo{
