@@ -1,6 +1,6 @@
 import java.util.*;
-
-class Platform implements Comparable{
+// We have to use this because we have used user-defined class as a key in TreeMap 
+class Platform implements Comparable{				// here by using this Comparable interface we will use the method compare to sort the data by the year
 	String str = null;
 	int year = 0;
 
@@ -11,7 +11,7 @@ class Platform implements Comparable{
 	public String toString(){
 		return "{" + str + ":" + year + "}";
 	}
-	public int compareTo(Object obj){
+	public int compareTo(Object obj){			// compareTo method of Comparable interface in wich we have used sort by year 
 		return this.year - (((Platform)obj).year);
 	}
 }
