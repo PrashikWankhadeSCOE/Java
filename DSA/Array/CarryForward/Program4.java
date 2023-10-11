@@ -22,6 +22,7 @@ class Demo{
                 }
 
                 System.out.println(perfectMatch(arr,N));
+		System.out.println(perfectMatchOpt(arr,N));
 	}
 	/*
 	 * here iterations are very less but 
@@ -43,9 +44,20 @@ class Demo{
 		return count;
 	}
 	/*
-	 * Now I want to do this same code in 
+	 * I have to do this in 
 	 * TC : O(N)
 	 * SC : O(1)
 	 */
 
+	static int perfectMatchOpt(char[]arr,int N){
+		int pair = 0;
+		int countA = 0;
+		for(int i = 0;i<N;i++){
+			if(arr[i]=='a')
+				countA++;
+			else if(arr[i]=='g')
+				pair= pair+countA;
+		}
+		return pair;
+	}
 }
