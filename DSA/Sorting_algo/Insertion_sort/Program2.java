@@ -1,6 +1,6 @@
 import java.util.*;
 
-class demo{
+class Demo{
 	int[] insertionsort(int arr[],int n){
 		if(n == arr.length-1)
 			return arr;
@@ -23,7 +23,7 @@ class demo{
                 }
 		int a = 1;
                 
-		arr = new Demo().insertionsort(arr);
+		arr = new Demo().insertionsort(arr,1);
                 
 		for(int i : arr)
                         System.out.println(i);
