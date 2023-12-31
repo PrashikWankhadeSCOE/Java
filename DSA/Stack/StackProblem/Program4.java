@@ -1,26 +1,28 @@
-import java.util*;
+import java.util.*;
 
 class Parenthesis{
-	boolean checker(String str){
+	boolean checker(String x){
 		Stack<Character> stack = new Stack<Character>();
-
-		for(int i = 0;i<str.length();i++){
-			if(str.charAt(i) == '{' || str.charAt(i) == '[' || str.charAt(i) == '('){
-				stack.push(str.charAt(i));		
-			}
-			else{
-				if((stack.peek() == '{' && str.charAt(i)=='}') || (stack.peek() == '[' && str.charAt(i)==']') || (stack.peek() == '(' && str.charAt(i)==')')){
-					if(stack.empty()){
-						return false;
-					}
-					stack.pop();
-				}
-				else{
-					
-				}
-			}
-		}
-		return true;
+	        int len = x.length();
+        
+        	for(int i = 0;i<len;i++){
+            		if(x.charAt(i)=='{' || x.charAt(i) == '[' || x.charAt(i) == '('){
+                		stack.push(x.charAt(i));
+            		}
+           	 	else{
+                		if(stack.empty()){
+                    			return false;
+                		}
+                		else if(stack.peek()=='{' && x.charAt(i)=='}' || stack.peek()=='(' && x.charAt(i)==')' || stack.peek()=='[' && x.charAt(i)==']'){
+                    			stack.pop();
+                		}
+                		else 
+                    			return false;
+            		}
+        	}
+        	if(stack.empty())
+            		return true;
+       	 	return false;
 	}
 }
 class Client{
@@ -29,12 +31,12 @@ class Client{
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
 
-		Parenthesis obj = Parenthesis();
+		Parenthesis obj = new Parenthesis();
 		boolean ret = obj.checker(str);
 
 		if(ret)
-			print("balanced");
+			System.out.println("balanced");
 		else
-			print("Unbalanced");
+			System.out.println("Unbalanced");
 	}
 }
